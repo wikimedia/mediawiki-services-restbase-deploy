@@ -1,0 +1,3 @@
+[submodule "restbase"]
+	path = restbase
+	url = https://github.com/gwicke/restbase.git
