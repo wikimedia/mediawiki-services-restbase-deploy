@@ -30,8 +30,7 @@ function Connection(address, protocolVersion, options) {
     this.address = hostAndPort[0];
     this.port = hostAndPort[1];
   }
-  /** @type {ClientOptions} */
-  this.options = options;
+  Object.defineProperty(this, "options", { value: options, enumerable: false, writable: false});
   this.protocolVersion = protocolVersion;
   this.streamHandlers = {};
   this.pendingWrites = [];
@@ -309,7 +308,7 @@ Connection.prototype.changeKeyspace = function (keyspace, callback) {
  * @param {function} callback
  */
 Connection.prototype.prepareOnce = function (query, callback) {
-  var name = this.keyspace || '' + query;
+  var name = ( this.keyspace || '' ) + query;
   var info = this.preparing[name];
   if (this.preparing[name]) {
     //Its being already prepared
