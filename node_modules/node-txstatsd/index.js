@@ -146,14 +146,22 @@ Client.prototype.sendAll = function(stats, value, type, sampleRate, callback){
     if (!Array.isArray(stats)) {
         stats = [stats];
     }
-    var message = stats.filter(function(item) {
-            return item !== undefined;
-        }).map(function(item) {
-            return self.makeMessage(item, value, type, sampleRate);
-        }).join('\n');
-    if (message) {
-        this._send(message, callback);
-    }
+
+    // txstatsd doesn't actually support multiple metrics in one packet
+    //var message = stats.filter(function(item) {
+    //        return item !== undefined;
+    //    }).map(function(item) {
+    //        return self.makeMessage(item, value, type, sampleRate);
+    //    }).join('\n');
+    //console.log(message);
+    //if (message) {
+    //    this._send(message, callback);
+    //}
+
+    // So send them all individually
+    stats.forEach(function(item) {
+        self._send(self.makeMessage(item, value, type, sampleRate), callback);
+    });
 };
 
 /**
