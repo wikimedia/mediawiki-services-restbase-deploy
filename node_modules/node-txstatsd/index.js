@@ -182,11 +182,13 @@ Client.prototype.makeMessage = function (stat, value, type, sampleRate) {
 
     if(sampleRate && sampleRate < 1){
         if(Math.random() < sampleRate){
-            message += '|@' + sampleRate;
+            return message + '|@' + sampleRate;
         } else {
             //don't want to send if we don't meet the sample ratio
             return;
         }
+    } else {
+        return message;
     }
 };
 
