@@ -119,4 +119,60 @@ codec.decodeVarInt =  function (bytes) {
     }
 };
 
+function getNumberParts(numberString) {
+    if(numberString.constructor !== String) {
+        numberString = numberString.toString();
+    }
+    if (/^\-?\d+\.\d+$/.test(numberString)) {
+        var bits = numberString.split(/\./);
+        return {
+            scale: bits[1].length,
+            value: Number(bits.join(''))
+        };
+    } else if (/^\-?\d+$/.test(numberString)) {
+        return {
+            scale: 0,
+            value: Number(numberString)
+        };
+    } else {
+        throw new Error("Invalid Decimal: " + numberString);
+    }
+}
+
+codec.encodeDecimal = function (n) {
+    var parts = getNumberParts(n);
+    var unscaled = parts.value;
+    var scale = new Buffer(4);
+    scale.writeUInt32BE(parts.scale, 0);
+    unscaled = codec.encodeVarInt(unscaled);
+    return Buffer.concat([scale, unscaled]);
+};
+
+codec.decodeDecimal = function (bytes) {
+    var unscaled = bytes.slice(4);
+    var scale = bytes.slice(0,4);
+    scale = scale.readUInt32BE(0);
+    unscaled = codec.decodeVarInt(unscaled).toString();
+    var decimal = unscaled;
+    if (scale) {
+        if (scale>unscaled.length-1) {
+            // for cases like , 0.001209547347587
+            //strip -ve sign first
+            var sign = 0;
+            if(/^-/.test(unscaled)) {
+                sign = 1;
+                unscaled = unscaled.slice(1);
+            }
+            for (var i = scale+1-unscaled.length; i > 0; i--) {
+                unscaled = "0" + unscaled;
+            }
+            if (sign) {
+                unscaled = "-" + unscaled;
+            }
+        }
+        decimal = unscaled.slice(0, unscaled.length-scale) + "." + unscaled.slice(unscaled.length-scale);
+    }
+    return decimal;
+};
+
 module.exports = codec;
