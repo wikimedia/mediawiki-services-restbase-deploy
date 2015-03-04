@@ -73,12 +73,18 @@ var Client = function (host, port, prefix, suffix, txstatsd, globalize, cacheDns
     this.mock   = options.mock;
 
 
-    if(options.cacheDns === true){
+    function resolve() {
         dns.lookup(options.host, function(err, address, family){
             if(err === null){
                 self.host = address;
+            } else {
+                // retry
+                setTimeout(100, resolve);
             }
         });
+    }
+    if(options.cacheDns === true){
+        resolve();
     }
 
     if(options.globalize){
