@@ -1171,22 +1171,8 @@ Operation.prototype.encodeQueryParam = function(arg) {
   return encodeURIComponent(arg);
 };
 
-/**
- * TODO revisit, might not want to leave '/'
- **/
 Operation.prototype.encodePathParam = function(pathParam) {
-  var encParts, part, parts, i, len;
-  pathParam = pathParam.toString();
-  if (pathParam.indexOf('/') === -1) {
-    return encodeURIComponent(pathParam);
-  } else {
-    parts = pathParam.split('/');
-    encParts = [];
-    for (i = 0, len = parts.length; i < len; i++) {
-      encParts.push(encodeURIComponent(parts[i]));
-    }
-    return encParts.join('/');
-  }
+  return encodeURIComponent(pathParam);
 };
 
 var Model = function(name, definition) {
