@@ -23,7 +23,7 @@
  * 
  */
 /**
- * bluebird build version 2.9.31
+ * bluebird build version 2.9.32
  * Features enabled: core, race, call_get, generators, map, nodeify, promisify, props, reduce, settle, some, cancel, using, filter, any, each, timers
 */
 !function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var f;"undefined"!=typeof window?f=window:"undefined"!=typeof global?f=global:"undefined"!=typeof self&&(f=self),f.Promise=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof _dereq_=="function"&&_dereq_;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof _dereq_=="function"&&_dereq_;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(_dereq_,module,exports){
@@ -1232,7 +1232,6 @@ return function() {
 "use strict";
 var util = _dereq_("./util.js");
 var isPrimitive = util.isPrimitive;
-var wrapsPrimitiveReceiver = util.wrapsPrimitiveReceiver;
 
 module.exports = function(Promise) {
 var returner = function () {
@@ -1263,7 +1262,7 @@ Promise.prototype["return"] =
 Promise.prototype.thenReturn = function (value) {
     if (value === undefined) return this.then(returnUndefined);
 
-    if (wrapsPrimitiveReceiver && isPrimitive(value)) {
+    if (isPrimitive(value)) {
         return this._then(
             wrapper(value, 2),
             undefined,
@@ -1279,7 +1278,7 @@ Promise.prototype["throw"] =
 Promise.prototype.thenThrow = function (reason) {
     if (reason === undefined) return this.then(throwUndefined);
 
-    if (wrapsPrimitiveReceiver && isPrimitive(reason)) {
+    if (isPrimitive(reason)) {
         return this._then(
             wrapper(reason, 1),
             undefined,
@@ -1519,7 +1518,6 @@ Promise.filter = function (promises, fn, options) {
 "use strict";
 module.exports = function(Promise, NEXT_FILTER, tryConvertToPromise) {
 var util = _dereq_("./util.js");
-var wrapsPrimitiveReceiver = util.wrapsPrimitiveReceiver;
 var isPrimitive = util.isPrimitive;
 var thrower = util.thrower;
 
@@ -1541,7 +1539,7 @@ function throw$(r) {
 }
 function promisedFinally(ret, reasonOrValue, isFulfilled) {
     var then;
-    if (wrapsPrimitiveReceiver && isPrimitive(reasonOrValue)) {
+    if (isPrimitive(reasonOrValue)) {
         then = isFulfilled ? return$(reasonOrValue) : throw$(reasonOrValue);
     } else {
         then = isFulfilled ? returnThis : throwThis;
@@ -4614,11 +4612,6 @@ function notEnumerableProp(obj, name, value) {
     return obj;
 }
 
-
-var wrapsPrimitiveReceiver = (function() {
-    return this !== "string";
-}).call("string");
-
 function thrower(r) {
     throw r;
 }
@@ -4782,7 +4775,6 @@ var ret = {
     inherits: inherits,
     withAppended: withAppended,
     maybeWrapAsError: maybeWrapAsError,
-    wrapsPrimitiveReceiver: wrapsPrimitiveReceiver,
     toFastProperties: toFastProperties,
     filledRange: filledRange,
     toString: safeToString,
