@@ -24,7 +24,10 @@ key_value =
 object = '{' spc kvs:key_values spc '}'
     { return kvs; }
 
-expression = variable / object / string / number
+array = '[' spc e:expression es:(spc ',' spc ee:expression { return ee; })* spc ']'
+    { return [e].concat(es); }
+
+expression = variable / object / array / number / string
 
 variable = v:varpart vs:(spc '.' vp:varpart { return vp; })*
     {

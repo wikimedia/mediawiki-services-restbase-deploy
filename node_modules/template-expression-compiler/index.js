@@ -1,3 +1,4 @@
+"use strict";
 var parser = require('./ExpressionParser');
 
 // See https://github.com/gwicke/tassembly#model-access-and-expressions
@@ -16,7 +17,11 @@ var ctxMap = {
 };
 
 function stringifyObject (obj) {
-    if (obj.constructor === Object) {
+    if (Array.isArray(obj)) {
+        return '[' + obj.map(function(elem) {
+            return stringifyObject(elem);
+        }).join(',') + ']';
+    } else if (obj.constructor === Object) {
         var res = '{',
             keys = Object.keys(obj);
         for (var i = 0; i < keys.length; i++) {
@@ -33,6 +38,8 @@ function stringifyObject (obj) {
         }
         res += '}';
         return res;
+    } else if (obj.constructor === Number) {
+        return obj;
     } else {
         return obj.toString();
     }

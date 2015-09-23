@@ -41,6 +41,16 @@ var testCases = [
     expression: "default($.request.headers,{content-type: 'text/html', x-forwarded-for: $.request.headers.x-forwarded-for})",
     tassembly: "m.default(rm.request.headers,{'content-type':'text/html','x-forwarded-for':rm.request.headers['x-forwarded-for']})",
 },
+{
+    name: 'Array support',
+    expression: {array: [ 'foo', 'bar', "'baz'" ] },
+    tassembly: "{array:[m.foo,m.bar,'baz']}",
+},
+{
+    name: 'Numbers',
+    expression: {array: [ 'foo', 5, "'baz'" ] },
+    tassembly: "{array:[m.foo,5,'baz']}",
+},
 ];
 
 
