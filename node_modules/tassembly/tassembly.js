@@ -57,7 +57,7 @@ function rewriteExpression (expr) {
 		if (/^$|[\[:(,]/.test(c)) {
 			res += c;
 			if (/[pri]/.test(expr[i+1])
-				&& /(?:p(?:[cm]s?)?|r[mc]|i)(?:[\.\)\]}]|$)/.test(expr.slice(i+1))) {
+				&& /^(?:p(?:[cm]s?)|r[mc]|i)(?:[\.\)\]}]|$)/.test(expr.slice(i+1))) {
 				// Prefix with full context object; only the local view model
 				// 'm' and the context 'c' is defined locally for now
 				res += 'c.';
@@ -145,7 +145,7 @@ function evalExprStub(expr, options, inlineVal) {
 		}
         if (inlineVal) {
             return 'try {' + inlineVal + newExpr + ';'
-			    + '} catch (e) {' + inlineVal +  + catchClause + '; }';
+			    + '} catch (e) {' + inlineVal + catchClause + '; }';
         } else {
             return '(function() { '
                 + 'try {'
