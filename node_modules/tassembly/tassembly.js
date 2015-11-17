@@ -138,19 +138,23 @@ function evalExprStub(expr, options, inlineVal) {
 	} else {
 		var catchClause;
 		newExpr = rewriteExpression(expr);
-		if (options && options.errorHandler) {
-			catchClause = 'c.options.errorHandler(e)'
-		} else {
+		if (options && typeof options.errorHandler === 'function') {
+			catchClause = 'c.options.errorHandler(e)';
+		} else if (!options || options.errorHandler === undefined) {
 			catchClause = '(console.error("Error in " + ' + JSON.stringify(newExpr) +'+": " + e.toString()) || "")';
 		}
-        if (inlineVal) {
-            return 'try {' + inlineVal + newExpr + ';'
-			    + '} catch (e) {' + inlineVal + catchClause + '; }';
+        if (catchClause) {
+            if (inlineVal) {
+                return 'try {' + inlineVal + newExpr + ';'
+                    + '} catch (e) {' + inlineVal + catchClause + '; }';
+            } else {
+                return '(function() { '
+                    + 'try {'
+                    + 'return ' + newExpr + ';'
+                    + '} catch (e) { return ' + catchClause + '; }})()';
+            }
         } else {
-            return '(function() { '
-                + 'try {'
-                + 'return ' + newExpr + ';'
-                + '} catch (e) { return ' + catchClause + '; }})()';
+            return inlineVal + newExpr;
         }
 	}
 }
@@ -517,7 +521,7 @@ TAssembly.prototype.compile = function(template, options) {
 		code += 'return res;';
 	}
 
-	//console.error(code);
+	// console.error(code);
 
 	var fn = new Function('c', 'options', code),
 		boundFn = function(ctx, dynamicOpts) {
