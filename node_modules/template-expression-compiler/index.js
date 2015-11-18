@@ -82,10 +82,16 @@ function parse(input, options) {
 
     // Only parse expressions, not key-value pairs
     options.startRule = 'expression';
-    if (typeof input === 'string') {
-        return stringifyObject(parser.parse(input, options));
-    } else {
-        return stringifyObject(parser.parse(stringifyObject(input), options));
+    try {
+        if (typeof input === 'string') {
+            return stringifyObject(parser.parse(input, options));
+        } else {
+            return stringifyObject(parser.parse(stringifyObject(input), options));
+        }
+    } catch (e) {
+        e.expression = input;
+        e.options = options;
+        throw e;
     }
 }
 
