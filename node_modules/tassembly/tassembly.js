@@ -64,9 +64,9 @@ function rewriteExpression (expr) {
 			}
 		} else if (c === "'") {
 			// skip over string literal
-			var literal = expr.slice(i).match(/'(?:[^\\']+|\\')*'/);
+			var literal = expr.slice(i).match(/'((?:[^\\']+|\\+'?)*)'/);
 			if (literal) {
-				res += literal[0];
+				res += JSON.stringify(literal[1].replace(/\\'/g, "'"));
 				i += literal[0].length - 1;
 			}
 		} else {
