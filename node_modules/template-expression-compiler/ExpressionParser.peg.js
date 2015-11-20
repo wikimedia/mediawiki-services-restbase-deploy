@@ -21,8 +21,8 @@ key_value =
     spc v:expression spc
     { return [k,v]; }
 
-object = '{' spc kvs:key_values spc '}'
-    { return kvs; }
+object = '{' spc kvs:key_values? spc '}'
+    { return kvs || {}; }
 
 array = '[' spc e:expression es:(spc ',' spc ee:expression { return ee; })* spc ']'
     { return [e].concat(es); }

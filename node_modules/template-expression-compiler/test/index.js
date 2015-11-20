@@ -105,6 +105,16 @@ var restBaseCases = [
         expression: 'foo-bar',
         tassembly: "m['foo-bar']",
     },
+    {
+        name: 'Empty object',
+        expression: '{}',
+        tassembly: "{}",
+    },
+    {
+        name: 'Empty object with spaces',
+        expression: '{  }',
+        tassembly: "{}",
+    },
 ];
 
 var restBaseOptions = {
