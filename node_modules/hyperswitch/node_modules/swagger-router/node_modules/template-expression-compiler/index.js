@@ -27,7 +27,9 @@ function makeCtxMatcher(map) {
 }
 
 function stringifyObject (obj) {
-    if (Array.isArray(obj)) {
+    if (obj === null) {
+        return obj;
+    } else if (Array.isArray(obj)) {
         return '[' + obj.map(function(elem) {
             return stringifyObject(elem);
         }).join(',') + ']';
