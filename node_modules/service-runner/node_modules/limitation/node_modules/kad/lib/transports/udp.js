@@ -42,10 +42,16 @@ UDPTransport.prototype._open = function(done) {
       self._receive.bind(self)
     );
 
-    self._socket.on('listening', done);
+    self._socket.on('listening', function() {
+        done();
+        done = null;
+    });
 
     self._socket.on('error', function(err) {
-      done(err);
+      if (done) {
+        done(err);
+        done = null;
+      }
     });
 
     self._socket.bind(port, address);
