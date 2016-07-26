@@ -14,11 +14,14 @@ var resultFlag = {
 
 /**
  * Buffer forward reader of CQL binary frames
+ * @param {FrameHeader} header
+ * @param {Buffer} body
+ * @param {Number} [offset]
  */
-function FrameReader(header, body) {
+function FrameReader(header, body, offset) {
   this.header = header;
   this.opcode = header.opcode;
-  this.offset = 0;
+  this.offset = offset || 0;
   this.buf = body;
 }
 
@@ -32,6 +35,9 @@ FrameReader.prototype.getBuffer = function () {
 
 /**
  * Slices the underlining buffer
+ * @param {Number} begin
+ * @param {Number} [end]
+ * @returns {Buffer}
  */
 FrameReader.prototype.slice = function (begin, end) {
   if (typeof end === 'undefined') {
@@ -106,11 +112,12 @@ FrameReader.prototype.readString = function () {
 
 /**
  * Checks that the new length to read is within the range of the buffer length. Throws a RangeError if not.
+ * @param {Number} newLength
  */
 FrameReader.prototype.checkOffset = function (newLength) {
   if (this.offset + newLength > this.buf.length) {
     var err = new RangeError('Trying to access beyond buffer length');
-    err.missingBytes = this.offset + newLength - this.buf.length;
+    err.expectedLength = newLength;
     throw err;
   }
 };
@@ -371,17 +378,20 @@ FrameReader.prototype.readEvent = function () {
 };
 
 FrameReader.prototype.parseSchemaChange = function () {
+  var result;
   if (this.header.version < 3) {
     //v1/v2: 3 strings, the table value can be empty
-    return {
+    result = {
       eventType: types.protocolEvents.schemaChange,
       schemaChangeType: this.readString(),
       keyspace: this.readString(),
       table: this.readString()
     };
+    result.isKeyspace = !result.table;
+    return result;
   }
   //v3+: 3 or 4 strings: change_type, target, keyspace and (table, type, functionName or aggregate)
-  var result = {
+  result = {
     eventType: types.protocolEvents.schemaChange,
     schemaChangeType: this.readString(),
     target: this.readString(),
@@ -390,6 +400,7 @@ FrameReader.prototype.parseSchemaChange = function () {
     udt: null,
     signature: null
   };
+  result.isKeyspace = result.target === 'KEYSPACE';
   switch (result.target) {
     case 'TABLE':
       result.table = this.readString();

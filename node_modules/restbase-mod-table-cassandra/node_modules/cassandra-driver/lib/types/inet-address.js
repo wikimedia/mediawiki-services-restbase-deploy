@@ -1,3 +1,4 @@
+"use strict";
 var util = require('util');
 var utils = require('../utils');
 /** @module types */
@@ -37,42 +38,58 @@ InetAddress.fromString = function (value) {
   if (!value) {
     return new InetAddress(new Buffer([0, 0, 0, 0]));
   }
-  var pattern = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$|^[\da-f:]+$/i;
-  if (!pattern.test(value)) {
-    throw new TypeError('Value could not be parsed as InetAddress: ' + value);
-  }
-  var parts = value.split('.');
-  if (parts.length === 4) {
-    //IPv4
+  var ipv4Pattern = /^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}$/;
+  var ipv6Pattern = /^[\da-f:.]+$/i;
+  var parts;
+  if (ipv4Pattern.test(value)) {
+    parts = value.split('.');
     return new InetAddress(new Buffer(parts));
   }
-  parts = value.split(':');
-  if (parts.length >= 3) {
-    var buffer = new Buffer(16);
-    var filling = 8 - parts.length + 1;
-    var applied = false;
-    var offset = 0;
-    for (var i = 0; i < parts.length; i++) {
-      var item = parts[i];
-      if (item) {
-        buffer.writeUInt16BE(parseInt(item, 16), offset);
-        offset = offset + 2;
-        continue;
-      }
-      //its an empty string
-      if (applied) {
-        //there could be 2 occurrences of empty string
-        filling = 1;
-      }
-      applied = true;
-      for (var j = 0; j < filling; j++) {
-        buffer[offset++] = 0;
-        buffer[offset++] = 0;
-      }
-    }
-    return new InetAddress(buffer);
+  if (!ipv6Pattern.test(value)) {
+    throw new TypeError('Value could not be parsed as InetAddress: ' + value);
   }
-  throw new TypeError('Value could not be parsed as InetAddress: ' + value);
+  parts = value.split(':');
+  if (parts.length < 3) {
+    throw new TypeError('Value could not be parsed as InetAddress: ' + value);
+  }
+  var buffer = new Buffer(16);
+  var filling = 8 - parts.length + 1;
+  var applied = false;
+  var offset = 0;
+  var embeddedIp4 = ipv4Pattern.test(parts[parts.length - 1]);
+  if (embeddedIp4) {
+    // Its IPv6 address with an embedded IPv4 address:
+    // subtract 1 from the potential empty filling as ip4 contains 4 bytes instead of 2 of a ipv6 section
+    filling -= 1;
+  }
+  for (var i = 0; i < parts.length; i++) {
+    var item = parts[i];
+    if (item) {
+      if (embeddedIp4 && i === parts.length - 1) {
+        item.split('.').forEach(function (uIntValue) {
+          buffer.writeUInt8(+uIntValue, offset++);
+        });
+        break;
+      }
+      buffer.writeUInt16BE(parseInt(item, 16), offset);
+      offset = offset + 2;
+      continue;
+    }
+    //its an empty string
+    if (applied) {
+      //there could be 2 occurrences of empty string
+      filling = 1;
+    }
+    applied = true;
+    for (var j = 0; j < filling; j++) {
+      buffer[offset++] = 0;
+      buffer[offset++] = 0;
+    }
+  }
+  if (embeddedIp4 && !isValidIPv4Mapped(buffer)) {
+    throw new TypeError('Only IPv4-Mapped IPv6 addresses are allowed as IPv6 address with embedded IPv4 address');
+  }
+  return new InetAddress(buffer);
 };
 
 /**
@@ -147,12 +164,16 @@ InetAddress.prototype.toString = function (encoding) {
       if (start < 0) {
         start = i;
       }
+
+      // at the end of the buffer, make a final call to checkLongest.
+      if(i === this.buffer.length - 2) {
+        checkLongest(i+2);
+      }
       continue;
     }
     //its a group of non-zeros
     checkLongest(i);
   }
-  checkLongest(this.buffer.length);
 
   var address = '';
   for (var h = 0; h < this.buffer.length; h = h + 2) {
@@ -182,5 +203,24 @@ InetAddress.prototype.toString = function (encoding) {
 InetAddress.prototype.toJSON = function () {
   return this.toString();
 };
+
+/**
+ * Validates for a IPv4-Mapped IPv6 according to https://tools.ietf.org/html/rfc4291#section-2.5.5
+ * @private
+ * @param {Buffer} buffer
+ */
+function isValidIPv4Mapped(buffer) {
+  // check the form
+  // |      80 bits   | 16 |   32 bits
+  // +----------------+----+-------------
+  // |0000........0000|FFFF| IPv4 address
+
+  for (var i = 0; i < buffer.length - 6; i++) {
+    if (buffer[i] !== 0) {
+      return false;
+    }
+  }
+  return !(buffer[10] !== 255 || buffer[11] !== 255);
+}
 
 module.exports = InetAddress;
