@@ -1,0 +1,216 @@
+# Number of worker processes to spawn.
+# Set to 0 to run everything in a single process without clustering.
+# Use 'ncpu' to run as many workers as there are CPU units
+num_workers: ncpu
+
+# Log error messages and gracefully restart a worker if v8 reports that it
+# uses more heap (note: not RSS) than this many mb.
+worker_heap_limit_mb: 300
+
+# The maximum interval in ms that can pass between two beat messages
+# sent by each worker to the master before it is killed.
+worker_heartbeat_timeout: 7500
+
+# Tell service-runner where the root dir of the service is
+app_base_path: /srv/deployment/restbase/deploy/restbase
+
+# Logger info
+logging:
+  level: warn
+  name: <%= log_name %>
+  streams:
+    - host: <%= logstash_host %>
+      port: <%= logstash_port %>
+      type: gelf
+    - path: <%= log_file %>
+      type: file
+
+# Statsd metrics reporter
+metrics:
+  name: <%= metrics_name %>
+  host: <%= metrics_host %>
+  port: <%= metrics_port %>
+  type: statsd
+  batch: true
+
+<% if rl_seeds|length > 0 %>
+ratelimiter:
+  type: kademlia
+  listen:
+    address: <%= ipaddress %>
+    port: 3050
+  seeds: ['<%= rl_seeds|join("','") %>']
+<% end %>
+
+# load & parametrise project templates. These are referenced / shared
+# between domains in the root_spec further down.
+default_project: &default_project
+  x-modules:
+    - path: projects/wmf_default.yaml
+      options: &default_options
+        table:
+          backend: cassandra
+          hosts: ['<%= seeds|join("','") %>']
+          keyspace: system
+          localDc: <%= cassandra_local_dc %>
+          datacenters: ['<%= cassandra_datacenters|join("','") %>']
+          username: <%= cassandra_user %>
+          password: <%= cassandra_password %>
+          defaultConsistency: <%= cassandra_default_consistency %>
+<% if cassandra_tls is not None and cassandra_tls|length > 0 -%>
+          tls:
+<% for key, value in cassandra_tls.iteritems() -%>
+             <%= key %>: <%= value %>
+<% endfor -%>
+<% end -%>
+          storage_groups:
+            # Catch-all group
+            - name: default.group.local
+              domains: /./
+        parsoid:
+          host: <%= parsoid_uri %>
+        action:
+          apiUriTemplate: <%= mwapi_uri %>
+          baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
+        graphoid:
+          host: <%= graphoid_uri %>
+        mathoid:
+          host: <%= mathoid_uri %>
+          # 10 days Varnish caching, one day client-side
+          cache-control: s-maxage=864000, max-age=86400
+        mobileapps:
+          host: <%= mobileapps_uri %>
+        citoid:
+          host: <%= citoid_uri %>
+        events:
+          uri: <%= eventlogging_service_uri %>
+          topic: resource_change
+          transcludes_topic: change-prop.transcludes.resource-change
+        related:
+          cache_control: s-maxage=86400, max-age=3600
+        # Cache headers for purged end points.
+        purged_cache_control: s-maxage=1209600, max-age=0, must-revalidate
+        skip_updates: <%= skip_updates %>
+        pdf:
+          cache_control: s-maxage=600, max-age=600
+          uri: <%= pdfrender_uri %>
+          secret: <%= pdfrender_key %>
+
+# A separate project for en.wikipedia because it is more feature-rich
+en.wikipedia.org: &en.wikipedia.org
+  x-modules:
+    - path: projects/wmf_enwiki.yaml
+      options:
+        <<: *default_options
+        trending:
+          host: <%= trendingedits_uri %>
+          cache_control: s-maxage=1800, max-age=1800
+
+# A different project template, sharing configuration options.
+wikimedia.org: &wikimedia.org
+  x-modules:
+    - path: projects/wikimedia.org.yaml
+      options:
+          <<: *default_options
+          pageviews:
+            host: <%= aqs_uri %>
+
+# A different project for wikidata since we have limited RESTBase support there.
+wikidata.org: &wikidata.org
+  x-modules:
+    - path: projects/wmf_wikidata.yaml
+      options: *default_options
+
+# wiktionaries config
+wiktionary: &wiktionary_project
+  x-modules:
+    - path: projects/wmf_wiktionary.yaml
+      options: *default_options
+
+# Swagger spec root.
+root_spec: &root_spec
+  title: "The RESTBase root"
+  # Some more general RESTBase info
+  x-request-filters:
+    - path: lib/security_response_header_filter.js
+  x-sub-request-filters:
+    - type: default
+      name: http
+      options:
+        allow:
+          - pattern: <%= mwpi_uri %>
+            forward_headers: true
+          - pattern: <%= parsoid_uri %>
+            forward_headers: true
+          - pattern: <%= aqs_uri %>
+            forward_headers:
+                x-client-ip: true
+                user-agent: true
+          - pattern: /^https?:\/\//
+  paths:
+
+    /{domain:aa.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:ar.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:ca.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:commons.wikimedia.beta.wmflabs.org}: *default_project
+    /{domain:deployment.wikimedia.beta.wmflabs.org}: *default_project
+    /{domain:de.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:de.wiktionary.beta.wmflabs.org}: *wiktionary_project
+    /{domain:en-rtl.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:en.wikibooks.beta.wmflabs.org}: *default_project
+    /{domain:en.wikinews.beta.wmflabs.org}: *default_project
+    /{domain:en.wikipedia.beta.wmflabs.org}: *en.wikipedia.org
+    /{domain:en.wikiquote.beta.wmflabs.org}: *default_project
+    /{domain:en.wikisource.beta.wmflabs.org}: *default_project
+    /{domain:en.wiktionary.beta.wmflabs.org}: *wiktionary_project
+    /{domain:en.wikiversity.beta.wmflabs.org}: *default_project
+    /{domain:en.wikivoyage.beta.wmflabs.org}: *default_project
+    /{domain:eo.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:es.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:fa.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:he.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:he.wiktionary.beta.wmflabs.org}: *wiktionary_project
+    /{domain:hi.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:ja.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:ko.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:login.wikimedia.beta.wmflabs.org}: *default_project
+    /{domain:meta.wikimedia.beta.wmflabs.org}: *default_project
+    /{domain:nl.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:ru.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:simple.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:sq.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:test.wikimedia.beta.wmflabs.org}: *default_project
+    /{domain:uk.wikipedia.beta.wmflabs.org}: *default_project
+    /{domain:wikidata.beta.wmflabs.org}: *wikidata.org
+    /{domain:zero.wikimedia.beta.wmflabs.org}: *default_project
+    /{domain:zh.wikipedia.beta.wmflabs.org}: *default_project
+
+    # global domain
+    /{domain:wikimedia.org}: *wikimedia.org
+
+    # A robots.txt to make sure that the content isn't indexed.
+    /robots.txt:
+      get:
+        x-request-handler:
+          - static:
+              return:
+                status: 200
+                headers:
+                  content-type: text/plain
+                body: |
+                  User-agent: *
+                  Allow: /*/v1/?doc
+                  Disallow: /
+
+services:
+  - name: <%= log_name %>
+    module: hyperswitch
+    conf:
+      port: <%= port %>
+      spec: *root_spec
+      salt: <%= salt_key %>
+      default_page_size: <%= page_size %>
+      user_agent: RESTBase/deployment-prep
+      ui_name: RESTBase
+      ui_url: https://www.mediawiki.org/wiki/RESTBase
+      ui_title: RESTBase docs
