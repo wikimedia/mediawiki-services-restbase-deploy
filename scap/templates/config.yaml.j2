@@ -62,12 +62,12 @@ default_project: &default_project
           username: <%= cassandra_user %>
           password: <%= cassandra_password %>
           defaultConsistency: <%= cassandra_default_consistency %>
-<% if cassandra_tls is not None and cassandra_tls|length > 0 -%>
+<% if cassandra_tls is not none and cassandra_tls|length > 0 -%>
           tls:
 <% for key, value in cassandra_tls.iteritems() -%>
              <%= key %>: <%= value %>
 <% endfor -%>
-<% endif -%>
+<% endif %>
           storage_groups:
             - name: phase0.group.local
               domains:
@@ -118,7 +118,7 @@ default_project: &default_project
           cache_control: s-maxage=86400, max-age=3600
         # Cache headers for purged end points.
         purged_cache_control: s-maxage=1209600, max-age=0, must-revalidate
-        skip_updates: <%= skip_updates %>
+        skip_updates: <%= 'true' if skip_updates else 'false' %>
         pdf:
           cache_control: s-maxage=600, max-age=600
           uri: <%= pdfrender_uri %>
@@ -166,7 +166,7 @@ root_spec: &root_spec
       name: http
       options:
         allow:
-          - pattern: <%= mwpi_uri %>
+          - pattern: <%= mwapi_uri %>
             forward_headers: true
           - pattern: <%= parsoid_uri %>
             forward_headers: true
