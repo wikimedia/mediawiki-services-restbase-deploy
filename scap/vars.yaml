@@ -15,7 +15,7 @@ cassandra_local_dc: testdc
 cassandra_datacenters: ['testdc']
 cassandra_user: cassandra
 cassandra_password: cassandra
-cassandra_default_consistency: one
+cassandra_default_consistency: localQuorum
 cassandra_tls:
 parsoid_uri: https://parsoid-beta.wmflabs.org
 graphoid_uri: https://graphoid-beta.wmflabs.org
@@ -23,7 +23,7 @@ mathoid_uri: https://mathoid-beta.wmflabs.org
 mobileapps_uri: https://appservice.wmflabs.org
 citoid_uri: https://citoid-beta.wmflabs.org
 eventlogging_service_uri: http://localhost:8085
-skip_updates: true
+skip_updates: false
 pdfrender_uri: https://pdfrender-beta.wmflabs.org
 pdfrender_key: secret
 trendingedits_uri: https://trending-beta.wmflabs.org
