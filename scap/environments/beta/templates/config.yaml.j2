@@ -40,7 +40,7 @@ ratelimiter:
     address: <%= ipaddress %>
     port: 3050
   seeds: ['<%= rl_seeds|join("','") %>']
-<% end %>
+<% endif %>
 
 # load & parametrise project templates. These are referenced / shared
 # between domains in the root_spec further down.
@@ -62,7 +62,7 @@ default_project: &default_project
 <% for key, value in cassandra_tls.iteritems() -%>
              <%= key %>: <%= value %>
 <% endfor -%>
-<% end -%>
+<% endif -%>
           storage_groups:
             # Catch-all group
             - name: default.group.local
