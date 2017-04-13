@@ -1,2 +1,41 @@
 salt_key: '123456'
 page_size: 10
+user_agent: RESTBase/deployment-prep
+storage_groups: []
+domains:
+  BetaCluster:
+    aa.wikipedia.beta.wmflabs.org: default_project
+    ar.wikipedia.beta.wmflabs.org: default_project
+    ca.wikipedia.beta.wmflabs.org: default_project
+    commons.wikimedia.beta.wmflabs.org: default_project
+    deployment.wikimedia.beta.wmflabs.org: default_project
+    de.wikipedia.beta.wmflabs.org: default_project
+    de.wiktionary.beta.wmflabs.org: wiktionary_project
+    en-rtl.wikipedia.beta.wmflabs.org: default_project
+    en.wikibooks.beta.wmflabs.org: default_project
+    en.wikinews.beta.wmflabs.org: default_project
+    en.wikipedia.beta.wmflabs.org: en.wikipedia.org
+    en.wikiquote.beta.wmflabs.org: default_project
+    en.wikisource.beta.wmflabs.org: default_project
+    en.wiktionary.beta.wmflabs.org: wiktionary_project
+    en.wikiversity.beta.wmflabs.org: default_project
+    en.wikivoyage.beta.wmflabs.org: default_project
+    eo.wikipedia.beta.wmflabs.org: default_project
+    es.wikipedia.beta.wmflabs.org: default_project
+    fa.wikipedia.beta.wmflabs.org: default_project
+    he.wikipedia.beta.wmflabs.org: default_project
+    he.wiktionary.beta.wmflabs.org: wiktionary_project
+    hi.wikipedia.beta.wmflabs.org: default_project
+    ja.wikipedia.beta.wmflabs.org: default_project
+    ko.wikipedia.beta.wmflabs.org: default_project
+    login.wikimedia.beta.wmflabs.org: default_project
+    meta.wikimedia.beta.wmflabs.org: default_project
+    nl.wikipedia.beta.wmflabs.org: default_project
+    ru.wikipedia.beta.wmflabs.org: default_project
+    simple.wikipedia.beta.wmflabs.org: default_project
+    sq.wikipedia.beta.wmflabs.org: default_project
+    test.wikimedia.beta.wmflabs.org: default_project
+    uk.wikipedia.beta.wmflabs.org: default_project
+    wikidata.beta.wmflabs.org: wikidata.org
+    zero.wikimedia.beta.wmflabs.org: default_project
+    zh.wikipedia.beta.wmflabs.org: default_project
