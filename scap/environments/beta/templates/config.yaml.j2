@@ -88,6 +88,8 @@ default_project: &default_project
           cache_control: s-maxage=86400, max-age=3600
         # Cache headers for purged end points.
         purged_cache_control: s-maxage=1209600, max-age=0, must-revalidate
+        # Cache control for purged endpoints allowing short-term client caching
+        purged_cache_control_client_cache: s-maxage=1209600, max-age=300
         skip_updates: <%= 'true' if skip_updates else 'false' %>
         pdf:
           cache_control: s-maxage=600, max-age=600
