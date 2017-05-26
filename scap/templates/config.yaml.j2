@@ -26,9 +26,9 @@ logging:
       type: file
   sampled_levels:
     # Target is about 1 request logged per minute @1000 req/s
-    trace/request: 0.00005
+    debug/request: 0.00005
     # Not sure what the rate of these is, so start conservatively.
-    trace/request/slow: 0.001
+    debug/request/slow: 0.001
 
 # Statsd metrics reporter
 metrics:
