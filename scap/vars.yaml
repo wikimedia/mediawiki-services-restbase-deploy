@@ -115,6 +115,7 @@ domains:
     cy.wikipedia.org: default_project
     da.wikipedia.org: default_project
     de.wikipedia.org: default_project
+    din.wikipedia.org: default_project
     diq.wikipedia.org: default_project
     dsb.wikipedia.org: default_project
     dty.wikipedia.org: default_project
