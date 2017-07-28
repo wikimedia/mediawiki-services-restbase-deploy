@@ -723,6 +723,7 @@ domains:
     it.wikinews.org: default_project
     ja.wikinews.org: default_project
     ko.wikinews.org: default_project
+    nl.wikinews.org: default_project
     no.wikinews.org: default_project
     pl.wikinews.org: default_project
     pt.wikinews.org: default_project
