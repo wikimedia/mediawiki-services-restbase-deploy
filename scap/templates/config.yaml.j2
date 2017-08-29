@@ -115,7 +115,7 @@ en.wikipedia.org: &en.wikipedia.org
         <<: *default_options
         trending:
           host: <%= trendingedits_uri %>
-          cache_control: s-maxage=1800, max-age=1800
+          cache_control: s-maxage=300, max-age=60
 
 # A different project template, sharing configuration options.
 wikimedia.org: &wikimedia.org
