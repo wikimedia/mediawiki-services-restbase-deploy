@@ -3,11 +3,11 @@ checks:
     type: command
     stage: promote
     command: depool-restbase
-  repool:
-    type: command
-    stage: restart_service
-    command: pool-restbase
   endpoints:
     type: nrpe
     stage: restart_service
     command: check_endpoints_restbase
+  repool:
+    type: command
+    stage: restart_service
+    command: pool-restbase
