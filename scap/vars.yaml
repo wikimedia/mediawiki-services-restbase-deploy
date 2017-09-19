@@ -57,6 +57,15 @@ storage_groups:
     domains: /\.wikivoyage\.org$/
   - name: globaldomain.group.local
     domains: /^wikimedia\.org$/
+storage_groups_ng:
+  - name: enwiki
+    domains: /^en\.wikipedia\.org$/
+  - name: commons
+    domains: /^commons\.wikimedia\.org$/
+  - name: globaldomain
+    domains: /^wikimedia\.org$/
+  - name: wikipedia
+    domains: /\.wikipedia\.org$/
 domains:
   Wikipedia:
     ab.wikipedia.org: default_project

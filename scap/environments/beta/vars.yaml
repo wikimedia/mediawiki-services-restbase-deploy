@@ -2,6 +2,7 @@ salt_key: '123456'
 page_size: 10
 user_agent: RESTBase/deployment-prep
 storage_groups: []
+storage_groups_ng: []
 cassandra_default_consistency: localOne
 domains:
   BetaCluster:
