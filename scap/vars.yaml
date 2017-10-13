@@ -783,6 +783,7 @@ domains:
     vi.wikivoyage.org: default_project
     zh.wikivoyage.org: default_project
   Wikimedia:
+    am.wikimedia.org: default_project
     ar.wikimedia.org: default_project
     bd.wikimedia.org: default_project
     be.wikimedia.org: default_project
