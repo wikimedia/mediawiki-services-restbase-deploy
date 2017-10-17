@@ -1,3 +1,4 @@
+env: beta
 salt_key: '123456'
 page_size: 10
 user_agent: RESTBase/deployment-prep

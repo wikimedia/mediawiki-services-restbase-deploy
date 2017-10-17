@@ -8,6 +8,7 @@ metrics_name: restbase
 metrics_host: localhost
 metrics_port: 8252
 # service
+env: production
 mwapi_uri: http://localhost/w/api.php
 ipaddress: '127.0.0.1'
 rl_seeds: []
