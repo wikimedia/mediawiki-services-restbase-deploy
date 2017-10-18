@@ -131,6 +131,13 @@ default_project: &default_project
           secret: <%= pdfrender_key %>
         transform:
           cx_host: <%= cxserver_uri %>
+<% if new_storage_enabled is not none and new_storage_enabled|length > 0 %>
+        summary:
+          new_storage_enabled:
+<% for item in new_storage_enabled %>
+            - '<%= item %>'
+<% endfor -%>
+<% endif %>
 
 # A separate project for en.wikipedia because it is more feature-rich
 en.wikipedia.org: &en.wikipedia.org
