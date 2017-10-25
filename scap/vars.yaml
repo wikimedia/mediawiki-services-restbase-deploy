@@ -32,7 +32,18 @@ trendingedits_uri: https://trending-beta.wmflabs.org
 cxserver_uri: https://cxserver-beta.wmflabs.org
 aqs_uri: https://wikimedia.org/api/rest_v1/metrics
 new_storage_enabled:
-  - '/.*/'
+  - 'ru.wikipedia.org'
+  - 'wikimediafoundation.org'
+  - '/wikimedia\.org$/'
+  - '/\.wikidata\.org$/'
+  - '/\.wiktionary\.org$/'
+  - '/\.wikibooks\.org$/'
+  - '/wikisource\.org$/'
+  - '/\.wikiquote\.org$/'
+  - '/\.wikinews\.org$/'
+  - '/\.wikiversity\.org$/'
+  - '/\.wikivoyage\.org$/'
+  - '/\.mediawiki\.org$/'
 port: 7231
 salt_key: '123456'
 page_size: 10
