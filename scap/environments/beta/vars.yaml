@@ -5,6 +5,8 @@ user_agent: RESTBase/deployment-prep
 storage_groups: []
 storage_groups_ng: []
 cassandra_default_consistency: localOne
+new_storage_enabled_parsoid:
+  - '/.*/'
 domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: default_project

@@ -98,6 +98,12 @@ default_project: &default_project
               domains: /./
         parsoid:
           host: <%= parsoid_uri %>
+          grace_ttl: 86400
+          <% if new_storage_enabled_parsoid is not none and new_storage_enabled_parsoid|length > 0 %>backends:
+            new:<% for item in new_storage_enabled_parsoid %>
+              - '<%= item %>'
+<% endfor -%>
+<% endif %>
         action:
           apiUriTemplate: <%= mwapi_uri %>
           baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
