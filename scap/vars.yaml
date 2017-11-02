@@ -34,10 +34,15 @@ aqs_uri: https://wikimedia.org/api/rest_v1/metrics
 new_storage_enabled:
   - '/.*/'
 new_storage_enabled_parsoid:
-  - 'test.wikipedia.org'
-  - 'test2.wikipedia.org'
-  - 'test.wikidata.org'
-  - 'mediawiki.org'
+  - /^(?:test.*\.wiki.*\.org|www.mediawiki.org)$/
+  - /\.wikimedia\.org$/
+  - /\.wiktionary\.org$/
+  - /\.wikibooks\.org$/
+  - /\.wikisource\.org$/
+  - /\.wikiquote\.org$/
+  - /\.wikinews\.org$/
+  - /\.wikiversity\.org$/
+  - /\.wikivoyage\.org$/
 port: 7231
 salt_key: '123456'
 page_size: 10
