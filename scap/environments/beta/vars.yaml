@@ -44,5 +44,3 @@ domains:
     wikidata.beta.wmflabs.org: wikidata.org
     zero.wikimedia.beta.wmflabs.org: default_project
     zh.wikipedia.beta.wmflabs.org: default_project
-new_storage_enabled:
-  - '/.*\.beta\.wmflabs\.org$/'
