@@ -41,6 +41,7 @@ new_storage_enabled_parsoid:
   - /\.wikinews\.org$/
   - /\.wikiversity\.org$/
   - /\.wikivoyage\.org$/
+  - /\.wikidata\.org$/
 port: 7231
 salt_key: '123456'
 page_size: 10
