@@ -28,7 +28,7 @@ var testCases = [
     tassembly: "{headers:{'content-type':rc.g.default(rm.request.headers['content-type'],'text/html')}}",
 },
 {
-    expression: {headers:{"content-type": "$$.default($.request.headers.content-type,'text/html')"}},
+    expression: {headers:{"content-type": "$$.default($.request.headers.content-type,'text/html')"}, body: undefined},
     tassembly: "{headers:{'content-type':rc.g.default(rm.request.headers['content-type'],'text/html')}}",
 },
 {
