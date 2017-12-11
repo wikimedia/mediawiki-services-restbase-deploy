@@ -28,7 +28,6 @@ eventlogging_service_uri: http://localhost:8085
 skip_updates: false
 pdfrender_uri: https://pdfrender-beta.wmflabs.org
 pdfrender_key: secret
-trendingedits_uri: https://trending-beta.wmflabs.org
 cxserver_uri: https://cxserver-beta.wmflabs.org
 aqs_uri: https://wikimedia.org/api/rest_v1/metrics
 delete_probability: 0.25
