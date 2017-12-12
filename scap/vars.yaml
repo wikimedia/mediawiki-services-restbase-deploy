@@ -69,7 +69,7 @@ storage_groups_ng:
     domains: /^wikimedia\.org$/
   - name: wikipedia
     domains: /\.wikipedia\.org$/
-summary_impl: mcs
+summary_impl: mwapi
 domains:
   Wikipedia:
     ab.wikipedia.org: default_project
