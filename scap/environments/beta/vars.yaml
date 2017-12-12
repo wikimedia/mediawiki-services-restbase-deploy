@@ -7,7 +7,6 @@ storage_groups_ng: []
 cassandra_default_consistency: localOne
 new_storage_enabled_parsoid:
   - '/.*/'
-summary_impl: mcs
 domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: default_project
