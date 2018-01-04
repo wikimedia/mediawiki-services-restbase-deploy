@@ -53,27 +53,6 @@ default_project: &default_project
   x-modules:
     - path: projects/wmf_default.yaml
       options: &default_options
-        table:
-          backend: cassandra
-          hosts: ['<%= seeds|join("','") %>']
-          keyspace: system
-          localDc: <%= cassandra_local_dc %>
-          datacenters: ['<%= cassandra_datacenters|join("','") %>']
-          username: <%= cassandra_user %>
-          password: <%= cassandra_password %>
-          defaultConsistency: <%= cassandra_default_consistency %>
-          <% if cassandra_tls is not none and cassandra_tls|length > 0 %>tls:<% for key, value in cassandra_tls.iteritems() %>
-            <%= key %>: <%= value -%>
-<% endfor -%>
-<% endif %>
-          storage_groups:
-          <%- for group in storage_groups %>
-            - name: <%= group.name %>
-              domains: <%= group.domains %>
-          <%- endfor %>
-            # Catch-all group
-            - name: default.group.local
-              domains: /./
         table_ng:
           backend: cassandra-ng
           hosts: ['<%= seeds_ng|join("','") if seeds_ng|length > 0 else seeds|join("','") %>']

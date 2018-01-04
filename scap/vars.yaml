@@ -12,7 +12,7 @@ env: production
 mwapi_uri: http://localhost/w/api.php
 ipaddress: '127.0.0.1'
 rl_seeds: []
-seeds: ['localhost']
+seeds_ng: ['localhost']
 cassandra_local_dc: testdc
 cassandra_datacenters: ['testdc']
 cassandra_user: cassandra
@@ -35,29 +35,6 @@ port: 7231
 salt_key: '123456'
 page_size: 10
 user_agent: RESTBase/WMF
-storage_groups:
-  - name: phase0.group.local
-    domains: /^(?:test.*\.wiki.*\.org|www.mediawiki.org)$/
-  - name: wikipedia.group.local
-    domains: /\.wikipedia\.org$/
-  - name: wikimedia.group.local
-    domains: /\.wikimedia\.org$/
-  - name: wiktionary.group.local
-    domains: /\.wiktionary\.org$/
-  - name: wikibooks.group.local
-    domains: /\.wikibooks\.org$/
-  - name: wikisource.group.local
-    domains: /\.wikisource\.org$/
-  - name: wikiquote.group.local
-    domains: /\.wikiquote\.org$/
-  - name: wikinews.group.local
-    domains: /\.wikinews\.org$/
-  - name: wikiversity.group.local
-    domains: /\.wikiversity\.org$/
-  - name: wikivoyage.group.local
-    domains: /\.wikivoyage\.org$/
-  - name: globaldomain.group.local
-    domains: /^wikimedia\.org$/
 storage_groups_ng:
   - name: enwiki
     domains: /^en\.wikipedia\.org$/
