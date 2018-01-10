@@ -7,6 +7,11 @@ checks:
     type: nrpe
     stage: restart_service
     command: check_endpoints_restbase
+  delay:
+    type: command
+    stage: restart_service
+    command: sleep 50
+    timeout: 60
   repool:
     type: command
     stage: restart_service
