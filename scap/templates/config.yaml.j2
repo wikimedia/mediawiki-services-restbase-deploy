@@ -53,8 +53,8 @@ default_project: &default_project
   x-modules:
     - path: projects/wmf_default.yaml
       options: &default_options
-        table_ng:
-          backend: cassandra-ng
+        table:
+          backend: cassandra
           hosts: ['<%= seeds_ng|join("','") if seeds_ng|length > 0 else seeds|join("','") %>']
           keyspace: system
           localDc: <%= cassandra_local_dc %>
