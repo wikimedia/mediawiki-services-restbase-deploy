@@ -4,7 +4,6 @@ page_size: 10
 user_agent: RESTBase/deployment-prep
 storage_groups_ng: []
 cassandra_default_consistency: localOne
-summary_impl: mcs
 domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: default_project
