@@ -3,6 +3,14 @@
 # Use 'ncpu' to run as many workers as there are CPU units
 num_workers: ncpu
 
+# Number of workers to start in parallel after the first worker.
+# The first worker is always started independently. After it has completed
+# its start-up, this number controls the number of workers to start in
+# parallel until `num_workers` have been started. Note that setting this
+# number to a too high a value might lead to high resource consumption
+# (especially of CPU) during the start-up process.
+startup_concurrency: 4
+
 # Log error messages and gracefully restart a worker if v8 reports that it
 # uses more heap (note: not RSS) than this many mb.
 worker_heap_limit_mb: 300
