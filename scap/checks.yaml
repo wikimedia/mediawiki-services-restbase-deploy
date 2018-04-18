@@ -6,8 +6,8 @@ checks:
   delay:
     type: command
     stage: restart_service
-    command: sleep 95
-    timeout: 105
+    command: sleep 55
+    timeout: 60
   endpoints:
     type: nrpe
     stage: restart_service
