@@ -137,6 +137,7 @@ domains:
     glk.wikipedia.org: default_project
     gn.wikipedia.org: default_project
     gom.wikipedia.org: default_project
+    gor.wikipedia.org: default_project
     got.wikipedia.org: default_project
     gu.wikipedia.org: default_project
     gv.wikipedia.org: default_project
@@ -190,6 +191,7 @@ domains:
     lb.wikipedia.org: default_project
     lbe.wikipedia.org: default_project
     lez.wikipedia.org: default_project
+    lfn.wikipedia.org: default_project
     lg.wikipedia.org: default_project
     li.wikipedia.org: default_project
     lij.wikipedia.org: default_project
@@ -572,6 +574,7 @@ domains:
     eo.wikisource.org: default_project
     es.wikisource.org: default_project
     et.wikisource.org: default_project
+    eu.wikisource.org: default_project
     fa.wikisource.org: default_project
     fi.wikisource.org: default_project
     fo.wikisource.org: default_project
