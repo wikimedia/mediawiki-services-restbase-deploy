@@ -158,6 +158,7 @@ domains:
     ig.wikipedia.org: default_project
     ik.wikipedia.org: default_project
     ilo.wikipedia.org: default_project
+    inh.wikipedia.org: default_project
     io.wikipedia.org: default_project
     is.wikipedia.org: default_project
     it.wikipedia.org: default_project
