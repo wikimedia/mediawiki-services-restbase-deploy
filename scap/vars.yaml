@@ -604,6 +604,7 @@ domains:
     pa.wikisource.org: default_project
     pl.wikisource.org: default_project
     pt.wikisource.org: default_project
+    pms.wikisource.org: default_project
     ro.wikisource.org: default_project
     ru.wikisource.org: default_project
     sa.wikisource.org: default_project
