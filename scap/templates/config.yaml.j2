@@ -72,6 +72,7 @@ default_project: &default_project
           username: <%= cassandra_user %>
           password: <%= cassandra_password %>
           defaultConsistency: <%= cassandra_default_consistency %>
+          skip_schema_update: true
           <% if env == 'beta' %>tls: { ca: '/dev/null' }<% endif %>
           <% if cassandra_tls is not none and cassandra_tls|length > 0 %>tls:<% for key, value in cassandra_tls.iteritems() %>
             <%= key %>: <%= value -%>
