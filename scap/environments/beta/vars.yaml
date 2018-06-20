@@ -35,6 +35,7 @@ domains:
     nl.wikipedia.beta.wmflabs.org: default_project
     ru.wikipedia.beta.wmflabs.org: default_project
     simple.wikipedia.beta.wmflabs.org: default_project
+    sr.wikipedia.beta.wmflabs.org: default_project
     sq.wikipedia.beta.wmflabs.org: default_project
     test.wikimedia.beta.wmflabs.org: default_project
     uk.wikipedia.beta.wmflabs.org: default_project
