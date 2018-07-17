@@ -787,6 +787,7 @@ domains:
     ee.wikimedia.org: default_project
     et.wikimedia.org: default_project
     fi.wikimedia.org: default_project
+    foundation.wikimedia.org: default_project
     id.wikimedia.org: default_project
     incubator.wikimedia.org: default_project
     wikitech.wikimedia.org: default_project
@@ -813,7 +814,6 @@ domains:
     wikimania2017.wikimedia.org: default_project
     wikimania2018.wikimedia.org: default_project
   Specials:
-    wikimediafoundation.org: default_project
     www.mediawiki.org: default_project
     wikisource.org: default_project
     beta.wikiversity.org: default_project
