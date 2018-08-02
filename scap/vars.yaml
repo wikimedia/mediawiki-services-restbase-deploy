@@ -268,6 +268,7 @@ domains:
     rw.wikipedia.org: default_project
     sa.wikipedia.org: default_project
     sah.wikipedia.org: default_project
+    sat.wikipedia.org: default_project
     sc.wikipedia.org: default_project
     scn.wikipedia.org: default_project
     sco.wikipedia.org: default_project
@@ -750,6 +751,7 @@ domains:
     ru.wikiversity.org: default_project
     sl.wikiversity.org: default_project
     sv.wikiversity.org: default_project
+    zh.wikiversity.org: default_project
   Wikivoyage:
     bn.wikivoyage.org: default_project
     de.wikivoyage.org: default_project
@@ -813,6 +815,7 @@ domains:
     wikimania2016.wikimedia.org: default_project
     wikimania2017.wikimedia.org: default_project
     wikimania2018.wikimedia.org: default_project
+    wikimania.wikimedia.org: default_project
   Specials:
     www.mediawiki.org: default_project
     wikisource.org: default_project
