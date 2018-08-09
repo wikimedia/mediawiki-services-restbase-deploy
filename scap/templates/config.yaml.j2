@@ -128,7 +128,7 @@ default_project: &default_project
           cx_host: <%= cxserver_uri %>
 
 # A separate project for wikipedias because they have more features
-en.wikipedia.org: &wikipedia.org
+wikipedia.org: &wikipedia.org
   x-modules:
     - path: projects/wmf_wikipedia.yaml
       options: *default_options
