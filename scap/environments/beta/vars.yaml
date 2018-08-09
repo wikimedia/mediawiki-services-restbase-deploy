@@ -6,14 +6,14 @@ storage_groups_ng: []
 cassandra_default_consistency: localOne
 domains:
   BetaCluster:
-    aa.wikipedia.beta.wmflabs.org: default_project
-    ar.wikipedia.beta.wmflabs.org: default_project
-    ca.wikipedia.beta.wmflabs.org: default_project
+    aa.wikipedia.beta.wmflabs.org: wikipedia.org
+    ar.wikipedia.beta.wmflabs.org: wikipedia.org
+    ca.wikipedia.beta.wmflabs.org: wikipedia.org
     commons.wikimedia.beta.wmflabs.org: default_project
     deployment.wikimedia.beta.wmflabs.org: default_project
-    de.wikipedia.beta.wmflabs.org: default_project
+    de.wikipedia.beta.wmflabs.org: wikipedia.org
     de.wiktionary.beta.wmflabs.org: wiktionary_project
-    en-rtl.wikipedia.beta.wmflabs.org: default_project
+    en-rtl.wikipedia.beta.wmflabs.org: wikipedia.org
     en.wikibooks.beta.wmflabs.org: default_project
     en.wikinews.beta.wmflabs.org: default_project
     en.wikipedia.beta.wmflabs.org: en.wikipedia.org
@@ -22,23 +22,23 @@ domains:
     en.wiktionary.beta.wmflabs.org: wiktionary_project
     en.wikiversity.beta.wmflabs.org: default_project
     en.wikivoyage.beta.wmflabs.org: default_project
-    eo.wikipedia.beta.wmflabs.org: default_project
-    es.wikipedia.beta.wmflabs.org: default_project
-    fa.wikipedia.beta.wmflabs.org: default_project
-    he.wikipedia.beta.wmflabs.org: default_project
+    eo.wikipedia.beta.wmflabs.org: wikipedia.org
+    es.wikipedia.beta.wmflabs.org: wikipedia.org
+    fa.wikipedia.beta.wmflabs.org: wikipedia.org
+    he.wikipedia.beta.wmflabs.org: wikipedia.org
     he.wiktionary.beta.wmflabs.org: wiktionary_project
-    hi.wikipedia.beta.wmflabs.org: default_project
-    ja.wikipedia.beta.wmflabs.org: default_project
-    ko.wikipedia.beta.wmflabs.org: default_project
+    hi.wikipedia.beta.wmflabs.org: wikipedia.org
+    ja.wikipedia.beta.wmflabs.org: wikipedia.org
+    ko.wikipedia.beta.wmflabs.org: wikipedia.org
     login.wikimedia.beta.wmflabs.org: default_project
     meta.wikimedia.beta.wmflabs.org: default_project
-    nl.wikipedia.beta.wmflabs.org: default_project
-    ru.wikipedia.beta.wmflabs.org: default_project
-    simple.wikipedia.beta.wmflabs.org: default_project
-    sr.wikipedia.beta.wmflabs.org: default_project
-    sq.wikipedia.beta.wmflabs.org: default_project
+    nl.wikipedia.beta.wmflabs.org: wikipedia.org
+    ru.wikipedia.beta.wmflabs.org: wikipedia.org
+    simple.wikipedia.beta.wmflabs.org: wikipedia.org
+    sr.wikipedia.beta.wmflabs.org: wikipedia.org
+    sq.wikipedia.beta.wmflabs.org: wikipedia.org
     test.wikimedia.beta.wmflabs.org: default_project
-    uk.wikipedia.beta.wmflabs.org: default_project
+    uk.wikipedia.beta.wmflabs.org: wikipedia.org
     wikidata.beta.wmflabs.org: wikidata.org
     zero.wikimedia.beta.wmflabs.org: default_project
-    zh.wikipedia.beta.wmflabs.org: default_project
+    zh.wikipedia.beta.wmflabs.org: wikipedia.org
