@@ -160,6 +160,12 @@ wiktionary: &wiktionary_project
     - path: projects/wmf_wiktionary.yaml
       options: *default_options
 
+# wikivoyage config
+wikivoyage: &wikivoyage_project
+  x-modules:
+     - path: projects/wmf_wikivoyage.yaml
+       options: *default_options
+
 # Swagger spec root.
 root_spec: &root_spec
   title: "The RESTBase root"

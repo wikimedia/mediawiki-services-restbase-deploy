@@ -21,7 +21,7 @@ domains:
     en.wikisource.beta.wmflabs.org: default_project
     en.wiktionary.beta.wmflabs.org: wiktionary_project
     en.wikiversity.beta.wmflabs.org: default_project
-    en.wikivoyage.beta.wmflabs.org: default_project
+    en.wikivoyage.beta.wmflabs.org: wikivoyage_project
     eo.wikipedia.beta.wmflabs.org: wikipedia.org
     es.wikipedia.beta.wmflabs.org: wikipedia.org
     fa.wikipedia.beta.wmflabs.org: wikipedia.org
