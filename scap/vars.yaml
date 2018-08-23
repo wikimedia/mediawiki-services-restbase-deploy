@@ -753,27 +753,28 @@ domains:
     sv.wikiversity.org: default_project
     zh.wikiversity.org: default_project
   Wikivoyage:
-    bn.wikivoyage.org: default_project
-    de.wikivoyage.org: default_project
-    el.wikivoyage.org: default_project
-    en.wikivoyage.org: default_project
-    es.wikivoyage.org: default_project
-    fa.wikivoyage.org: default_project
-    fr.wikivoyage.org: default_project
-    fi.wikivoyage.org: default_project
-    he.wikivoyage.org: default_project
-    hi.wikivoyage.org: default_project
-    it.wikivoyage.org: default_project
-    nl.wikivoyage.org: default_project
-    pl.wikivoyage.org: default_project
-    ps.wikivoyage.org: default_project
-    pt.wikivoyage.org: default_project
-    ro.wikivoyage.org: default_project
-    ru.wikivoyage.org: default_project
-    sv.wikivoyage.org: default_project
-    uk.wikivoyage.org: default_project
-    vi.wikivoyage.org: default_project
-    zh.wikivoyage.org: default_project
+    # Wikivoyage needs MCS and PCS, so to reuse wikipedia.org project for them.
+    bn.wikivoyage.org: wikivoyage_project
+    de.wikivoyage.org: wikivoyage_project
+    el.wikivoyage.org: wikivoyage_project
+    en.wikivoyage.org: wikivoyage_project
+    es.wikivoyage.org: wikivoyage_project
+    fa.wikivoyage.org: wikivoyage_project
+    fr.wikivoyage.org: wikivoyage_project
+    fi.wikivoyage.org: wikivoyage_project
+    he.wikivoyage.org: wikivoyage_project
+    hi.wikivoyage.org: wikivoyage_project
+    it.wikivoyage.org: wikivoyage_project
+    nl.wikivoyage.org: wikivoyage_project
+    pl.wikivoyage.org: wikivoyage_project
+    ps.wikivoyage.org: wikivoyage_project
+    pt.wikivoyage.org: wikivoyage_project
+    ro.wikivoyage.org: wikivoyage_project
+    ru.wikivoyage.org: wikivoyage_project
+    sv.wikivoyage.org: wikivoyage_project
+    uk.wikivoyage.org: wikivoyage_project
+    vi.wikivoyage.org: wikivoyage_project
+    zh.wikivoyage.org: wikivoyage_project
   Wikimedia:
     am.wikimedia.org: default_project
     ar.wikimedia.org: default_project
