@@ -790,6 +790,7 @@ domains:
     ee.wikimedia.org: default_project
     et.wikimedia.org: default_project
     fi.wikimedia.org: default_project
+    fixcopyright.wikimedia.org: default_project
     foundation.wikimedia.org: default_project
     id.wikimedia.org: default_project
     incubator.wikimedia.org: default_project
