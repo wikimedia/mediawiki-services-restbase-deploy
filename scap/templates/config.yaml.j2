@@ -123,6 +123,8 @@ default_project: &default_project
         pdf:
           cache_control: s-maxage=600, max-age=600
           uri: <%= pdfrender_uri %>
+          new_uri: <%= proton_uri %>
+          new_probability: <%= proton_probability %>
           secret: <%= pdfrender_key %>
         transform:
           cx_host: <%= cxserver_uri %>
