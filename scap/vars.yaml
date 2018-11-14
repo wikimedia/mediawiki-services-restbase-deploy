@@ -278,6 +278,7 @@ domains:
     se.wikipedia.org: wikipedia.org
     sg.wikipedia.org: wikipedia.org
     sh.wikipedia.org: wikipedia.org
+    shn.wikipedia.org: wikipedia.org
     si.wikipedia.org: wikipedia.org
     simple.wikipedia.org: wikipedia.org
     sk.wikipedia.org: wikipedia.org
@@ -489,6 +490,7 @@ domains:
     wa.wiktionary.org: wiktionary_project
     wo.wiktionary.org: wiktionary_project
     yi.wiktionary.org: wiktionary_project
+    yue.wiktionary.org: wiktionary_project
     zh.wiktionary.org: wiktionary_project
     zh-min-nan.wiktionary.org: wiktionary_project
     zu.wiktionary.org: wiktionary_project
@@ -723,6 +725,7 @@ domains:
     it.wikinews.org: default_project
     ja.wikinews.org: default_project
     ko.wikinews.org: default_project
+    li.wikinews.org: default_project
     nl.wikinews.org: default_project
     no.wikinews.org: default_project
     pl.wikinews.org: default_project
@@ -807,6 +810,7 @@ domains:
     outreach.wikimedia.org: default_project
     pl.wikimedia.org: default_project
     pt.wikimedia.org: default_project
+    punjabi.wikimedia.org: default_project
     rs.wikimedia.org: default_project
     ru.wikimedia.org: default_project
     se.wikimedia.org: default_project
