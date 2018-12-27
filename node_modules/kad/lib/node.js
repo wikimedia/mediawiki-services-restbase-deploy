@@ -235,6 +235,10 @@ Node.prototype._replicate = function() {
       return self._log.error('failed to parse value from %s', data.value);
     }
 
+    if (!(item && item.publisher && item.timestamp)) {
+      return;
+    }
+
     // if we are not the publisher, then replicate every T_REPLICATE
     if (item.publisher !== self._self.nodeID) {
       self.put(data.key, item.value, function(err) {
