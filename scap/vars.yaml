@@ -605,6 +605,7 @@ domains:
     mk.wikisource.org: default_project
     ml.wikisource.org: default_project
     mr.wikisource.org: default_project
+    nap.wikisource.org: default_project
     nl.wikisource.org: default_project
     no.wikisource.org: default_project
     or.wikisource.org: default_project
