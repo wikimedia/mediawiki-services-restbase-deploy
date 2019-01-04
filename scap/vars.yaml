@@ -42,7 +42,7 @@ storage_groups_ng:
   - name: enwiki
     domains: /^en\.wikipedia\.org$/
   - name: commons
-    domains: /^commons\.wikimedia\.org$/
+    domains: /commons\.wikimedia\.org$/
   - name: globaldomain
     domains: /^wikimedia\.org$/
   - name: wikipedia
@@ -792,6 +792,7 @@ domains:
     cn.wikimedia.org: default_project
     co.wikimedia.org: default_project
     commons.wikimedia.org: default_project
+    test-commons.wikimedia.org: default_project
     dk.wikimedia.org: default_project
     donate.wikimedia.org: default_project
     ee.wikimedia.org: default_project
