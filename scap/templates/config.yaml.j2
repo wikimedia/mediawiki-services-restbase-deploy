@@ -27,20 +27,13 @@ logging:
   level: warn
   name: <%= log_name %>
   streams:
-<%- if env == 'production' %>
-    - host: <%= logstash_host %>
-      port: <%= logstash_port %>
-      type: gelf
-<%- endif %>
     - path: <%= log_file %>
       type: file
-<%- if env == 'beta' %>
     - type: syslog
       host: localhost
       port: <%= rsyslog_port %>
       prefix: '@cee: '
       name: node
-<%- endif %>
   sampled_levels:
     # Target is about 1 request logged per minute @1000 req/s
     debug/request: 0.00005
