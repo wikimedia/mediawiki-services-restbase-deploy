@@ -3,6 +3,7 @@ log_name: restbase
 logstash_host: localhost
 logstash_port: 12201
 log_file: /tmp/restbase.log
+rsyslog_port: 10514
 # metrics
 metrics_name: restbase
 metrics_host: localhost
