@@ -43,3 +43,4 @@ domains:
     wikidata.beta.wmflabs.org: wikidata.org
     zero.wikimedia.beta.wmflabs.org: default_project
     zh.wikipedia.beta.wmflabs.org: wikipedia.org
+    zh.wikivoyage.beta.wmflabs.org: wikivoyage_project
