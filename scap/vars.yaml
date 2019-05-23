@@ -32,7 +32,7 @@ proton_probability: 1
 cxserver_uri: https://cxserver-beta.wmflabs.org
 aqs_uri: https://wikimedia.org/api/rest_v1/metrics
 summary_impl: mcs
-delete_probability: 1
+stash_ratelimit: 5
 port: 7231
 salt_key: '123456'
 page_size: 10

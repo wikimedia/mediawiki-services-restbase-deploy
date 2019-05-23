@@ -90,7 +90,7 @@ default_project: &default_project
         parsoid:
           host: <%= parsoid_uri %>
           grace_ttl: 86400
-          delete_probability: <%= delete_probability %>
+          stash_ratelimit: <%= stash_ratelimit %>
         action:
           apiUriTemplate: <%= mwapi_uri %>
           baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
