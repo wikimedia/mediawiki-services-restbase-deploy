@@ -25,10 +25,7 @@ mobileapps_uri: https://appservice.wmflabs.org
 citoid_uri: https://citoid-beta.wmflabs.org
 eventlogging_service_uri: http://localhost:8085
 skip_updates: false
-pdfrender_uri: https://pdfrender-beta.wmflabs.org
-pdfrender_key: secret
 proton_uri: https://proton-beta.wmflabs.org
-proton_probability: 1
 cxserver_uri: https://cxserver-beta.wmflabs.org
 aqs_uri: https://wikimedia.org/api/rest_v1/metrics
 summary_impl: mcs
