@@ -63,109 +63,156 @@ ratelimiter:
 # between domains in the root_spec further down.
 default_project: &default_project
   x-modules:
-    - path: projects/wmf_default.yaml
-      options: &default_options
-        table:
-          backend: cassandra
-          hosts: ['<%= seeds_ng|join("','") if seeds_ng|length > 0 else seeds|join("','") %>']
-          keyspace: system
-          localDc: <%= cassandra_local_dc %>
-          datacenters: ['<%= cassandra_datacenters|join("','") %>']
-          username: <%= cassandra_user %>
-          password: <%= cassandra_password %>
-          defaultConsistency: <%= cassandra_default_consistency %>
-          skip_schema_update: true
-          <% if cassandra_tls is not none and cassandra_tls|length > 0 %>tls:<% for key, value in cassandra_tls.iteritems() %>
-            <%= key %>: <%= value -%>
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/default.wmf.yaml
+                options: &default_options
+                  parsoid:
+                    host: <%= parsoid_uri %>
+                    grace_ttl: 86400
+                    stash_ratelimit: <%= stash_ratelimit %>
+                  action:
+                    apiUriTemplate: <%= mwapi_uri %>
+                    baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
+                  graphoid:
+                    host: <%= graphoid_uri %>
+                  mathoid:
+                    host: <%= mathoid_uri %>
+                    # 10 days Varnish caching, one day client-side
+                    cache-control: s-maxage=864000, max-age=86400
+                  mobileapps:
+                    host: <%= mobileapps_uri %>
+                    storage: new
+                  citoid:
+                    host: <%= citoid_uri %>
+                  recommendation:
+                    host: <%= recommendation_uri %>
+                  events:
+                    uri: <%= eventlogging_service_uri %>
+                    topic: resource_change
+                    transcludes_topic: change-prop.transcludes.resource-change
+                  summary:
+                    host: <%= mobileapps_uri %>
+                    implementation: <%= summary_impl %>
+                    protocol: https
+                  related:
+                    cache_control: s-maxage=86400, max-age=3600
+                  # Cache headers for purged end points.
+                  purged_cache_control: s-maxage=1209600, max-age=0, must-revalidate
+                  # Cache control for purged endpoints allowing short-term client caching
+                  purged_cache_control_client_cache: s-maxage=1209600, max-age=300
+                  skip_updates: <%= 'true' if skip_updates else 'false' %>
+                  pdf:
+                    cache_control: s-maxage=600, max-age=600
+                    uri: <%= proton_uri %>
+                  transform:
+                    cx_host: <%= cxserver_uri %>
+              - path: projects/proxy.yaml
+                options: &proxy_options
+                  backend_host_template: '{{"/{domain}/sys/legacy"}}'
+                  block_external_reqs: true
+          /{api:sys}: &default_sys
+            x-modules:
+              - path: projects/sys/default.wmf.yaml
+                options: *default_options
+              - path: projects/proxy.yaml
+                options:
+                  <<: *proxy_options
+                  block_external_reqs: false
+              - spec:
+                  paths:
+                    /legacy/key_value:
+                      x-modules:
+                        - path: sys/key_value.js
+                    /legacy/page_revisions:
+                      x-modules:
+                        - path: sys/page_revisions.js
+                    /table: &table_spec
+                      x-modules:
+                        - path: sys/table.js
+                          options:
+                            conf:
+                              backend: cassandra
+                              hosts: ['<%= seeds_ng|join("','") if seeds_ng|length > 0 else seeds|join("','") %>']
+                              keyspace: system
+                              localDc: <%= cassandra_local_dc %>
+                              datacenters: ['<%= cassandra_datacenters|join("','") %>']
+                              username: <%= cassandra_user %>
+                              password: <%= cassandra_password %>
+                              defaultConsistency: <%= cassandra_default_consistency %>
+                              skip_schema_update: true
+                              <% if cassandra_tls is not none and cassandra_tls|length > 0 %>tls:<% for key, value in cassandra_tls.iteritems() %>
+                                <%= key %>: <%= value -%>
 <% endfor -%>
 <% endif %>
-          storage_groups:
-          <%- for group in storage_groups_ng %>
-            - name: <%= group.name %>
-              domains: <%= group.domains %>
-          <%- endfor %>
-            # Catch-all group
-            - name: others
-              domains: /./
-        parsoid:
-          host: <%= parsoid_uri %>
-          grace_ttl: 86400
-          stash_ratelimit: <%= stash_ratelimit %>
-        action:
-          apiUriTemplate: <%= mwapi_uri %>
-          baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
-        graphoid:
-          host: <%= graphoid_uri %>
-        mathoid:
-          host: <%= mathoid_uri %>
-          # 10 days Varnish caching, one day client-side
-          cache-control: s-maxage=864000, max-age=86400
-        mobileapps:
-          host: <%= mobileapps_uri %>
-          storage: new
-        citoid:
-          host: <%= citoid_uri %>
-        recommendation:
-          host: <%= recommendation_uri %>
-        events:
-          uri: <%= eventlogging_service_uri %>
-          topic: resource_change
-          transcludes_topic: change-prop.transcludes.resource-change
-        summary:
-          host: <%= mobileapps_uri %>
-          implementation: <%= summary_impl %>
-          protocol: https
-        related:
-          cache_control: s-maxage=86400, max-age=3600
-        # Cache headers for purged end points.
-        purged_cache_control: s-maxage=1209600, max-age=0, must-revalidate
-        # Cache control for purged endpoints allowing short-term client caching
-        purged_cache_control_client_cache: s-maxage=1209600, max-age=300
-        skip_updates: <%= 'true' if skip_updates else 'false' %>
-        pdf:
-          cache_control: s-maxage=600, max-age=600
-          uri: <%= proton_uri %>
-        transform:
-          cx_host: <%= cxserver_uri %>
+                              storage_groups:
+                              <%- for group in storage_groups_ng %>
+                                - name: <%= group.name %>
+                                  domains: <%= group.domains %>
+                              <%- endfor %>
+                                # Catch-all group
+                                - name: others
+                                  domains: /./
 
 # A separate project for wikipedias because they have more features
 wikipedia.org: &wikipedia.org
   x-modules:
-    - path: projects/wmf_wikipedia.yaml
-      options: *default_options
-
-# A separate project for en.wikipedia because it is even more feature-rich
-en.wikipedia.org: &en.wikipedia.org
-  x-modules:
-    - path: projects/wmf_enwiki.yaml
-      options: *default_options
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/wikipedia.wmf.yaml
+                options: *default_options
+          /{api:sys}: *default_sys
 
 # A different project template, sharing configuration options.
 wikimedia.org: &wikimedia.org
   x-modules:
-    - path: projects/wikimedia.org.yaml
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/wikimedia.wmf.yaml
       options:
           <<: *default_options
           pageviews:
             host: <%= aqs_uri %>
+          /{api:sys}: *default_sys
 
 # A different project for wikidata since we have limited RESTBase support there.
 wikidata.org: &wikidata.org
   x-modules:
-    - path: projects/wmf_wikidata.yaml
-      options: *default_options
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/wikidata.wmf.yaml
+                options: *default_options
+          /{api:sys}: *default_sys
 
 # wiktionaries config
 wiktionary: &wiktionary_project
   x-modules:
-    - path: projects/wmf_wiktionary.yaml
-      options: *default_options
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/wiktionary.wmf.yaml
+                options: *default_options
+          /{api:sys}: *default_sys
 
 # wikivoyage config
 wikivoyage: &wikivoyage_project
   x-modules:
-     - path: projects/wmf_wikivoyage.yaml
-       options: *default_options
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/wikivoyage.wmf.yaml
+                options: *default_options
+          /{api:sys}: *default_sys
 
 # Swagger spec root.
 root_spec: &root_spec
