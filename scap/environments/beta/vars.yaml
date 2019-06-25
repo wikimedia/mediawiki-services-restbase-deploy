@@ -16,7 +16,7 @@ domains:
     en-rtl.wikipedia.beta.wmflabs.org: wikipedia.org
     en.wikibooks.beta.wmflabs.org: default_project
     en.wikinews.beta.wmflabs.org: default_project
-    en.wikipedia.beta.wmflabs.org: en.wikipedia.org
+    en.wikipedia.beta.wmflabs.org: wikipedia.org
     en.wikiquote.beta.wmflabs.org: default_project
     en.wikisource.beta.wmflabs.org: default_project
     en.wiktionary.beta.wmflabs.org: wiktionary_project
