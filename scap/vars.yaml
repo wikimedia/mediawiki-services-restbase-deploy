@@ -787,8 +787,8 @@ domains:
     ca.wikimedia.org: default_project
     cn.wikimedia.org: default_project
     co.wikimedia.org: default_project
-    commons.wikimedia.org: default_project
-    test-commons.wikimedia.org: default_project
+    commons.wikimedia.org: commons_project
+    test-commons.wikimedia.org: commons_project
     dk.wikimedia.org: default_project
     donate.wikimedia.org: default_project
     ee.wikimedia.org: default_project
