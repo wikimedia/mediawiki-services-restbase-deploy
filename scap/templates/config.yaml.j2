@@ -201,7 +201,9 @@ wikimedia.org: &wikimedia.org
                     /events:
                       x-modules:
                         - path: sys/events.js
-                          options: *events_options
+                          options:
+                            <<: *events_options
+                            skip_updates: <%= 'true' if skip_updates else 'false' %>
 
 # A different project for wikidata since we have limited RESTBase support there.
 wikidata.org: &wikidata.org
