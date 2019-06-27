@@ -78,7 +78,7 @@ default_project: &default_project
                     baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
                   graphoid:
                     host: <%= graphoid_uri %>
-                  mathoid:
+                  mathoid: &mathoid_options
                     host: <%= mathoid_uri %>
                     # 10 days Varnish caching, one day client-side
                     cache-control: s-maxage=864000, max-age=86400
@@ -89,7 +89,7 @@ default_project: &default_project
                     host: <%= citoid_uri %>
                   recommendation:
                     host: <%= recommendation_uri %>
-                  events:
+                  events: &events_options
                     uri: <%= eventlogging_service_uri %>
                     topic: resource_change
                     transcludes_topic: change-prop.transcludes.resource-change
@@ -175,11 +175,33 @@ wikimedia.org: &wikimedia.org
           /{api:v1}:
             x-modules:
               - path: projects/v1/wikimedia.wmf.yaml
-      options:
-          <<: *default_options
-          pageviews:
-            host: <%= aqs_uri %>
-          /{api:sys}: *default_sys
+                options:
+                    <<: *default_options
+                    pageviews:
+                      host: <%= aqs_uri %>
+          /{api:sys}:
+            x-modules:
+              - path: projects/proxy.yaml
+                options:
+                  <<: *proxy_options
+                  block_external_reqs: false
+              - spec:
+                  paths:
+                    /legacy/key_value:
+                      x-modules:
+                        - path: sys/key_value.js
+                    /table: *table_spec
+                    /mathoid:
+                      x-modules:
+                        - path: sys/mathoid.js
+                          options: *mathoid_options
+                    /post_data:
+                      x-modules:
+                        - path: sys/post_data.js
+                    /events:
+                      x-modules:
+                        - path: sys/events.js
+                          options: *events_options
 
 # A different project for wikidata since we have limited RESTBase support there.
 wikidata.org: &wikidata.org
