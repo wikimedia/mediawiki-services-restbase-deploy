@@ -9,7 +9,7 @@ domains:
     aa.wikipedia.beta.wmflabs.org: wikipedia.org
     ar.wikipedia.beta.wmflabs.org: wikipedia.org
     ca.wikipedia.beta.wmflabs.org: wikipedia.org
-    commons.wikimedia.beta.wmflabs.org: default_project
+    commons.wikimedia.beta.wmflabs.org: commons_project
     deployment.wikimedia.beta.wmflabs.org: default_project
     de.wikipedia.beta.wmflabs.org: wikipedia.org
     de.wiktionary.beta.wmflabs.org: wiktionary_project

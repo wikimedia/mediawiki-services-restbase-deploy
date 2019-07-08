@@ -238,6 +238,25 @@ wikivoyage: &wikivoyage_project
                 options: *default_options
           /{api:sys}: *default_sys
 
+# commons config
+commons_project: &commons_project
+  x-modules:
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/default.wmf.yaml
+                options: *default_options
+              - path: projects/proxy.yaml
+                options: *proxy_options
+              - spec:
+                   paths:
+                     /data:
+                       x-modules:
+                         - path: v1/recommend-caption.yaml
+                           options: '{{options.recommendation}}'
+          /{api:sys}: *default_sys
+
 # Swagger spec root.
 root_spec: &root_spec
   title: "The RESTBase root"
