@@ -87,7 +87,7 @@ default_project: &default_project
                     storage: new
                   citoid:
                     host: <%= citoid_uri %>
-                  recommendation:
+                  recommendation: &recommendation_options
                     host: <%= recommendation_uri %>
                   events: &events_options
                     uri: <%= eventlogging_service_uri %>
@@ -254,7 +254,7 @@ commons_project: &commons_project
                      /data:
                        x-modules:
                          - path: v1/recommend-caption.yaml
-                           options: '{{options.recommendation}}'
+                           options: *recommendation_options
           /{api:sys}: *default_sys
 
 # Swagger spec root.
