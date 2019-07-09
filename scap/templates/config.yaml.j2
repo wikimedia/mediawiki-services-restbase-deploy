@@ -306,7 +306,7 @@ root_spec: &root_spec
 services:
   - name: <%= log_name %>
     module: hyperswitch
-    conf:
+    conf: &rb_conf
       port: <%= port %>
       spec: *root_spec
       salt: <%= salt_key %>
@@ -315,3 +315,12 @@ services:
       ui_name: REST API
       ui_url: https://www.mediawiki.org/wiki/RESTBase
       ui_title: REST API Documentation
+  # TEMP for RESTBase->RESTRouter transition.
+  # We expose old RESTBase on both ports - 7233 for future RESTBase and
+  # 7231 for what in future will be RESTRouter. After the transition is complete
+  # we will stop exposing 2 ports.
+  - name: <%= log_name %>
+    module: hyperswitch
+    conf:
+      <<: *rb_conf
+      port: 7233
