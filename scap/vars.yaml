@@ -23,7 +23,7 @@ graphoid_uri: https://graphoid-beta.wmflabs.org
 mathoid_uri: https://mathoid-beta.wmflabs.org
 mobileapps_uri: https://appservice.wmflabs.org
 citoid_uri: https://citoid-beta.wmflabs.org
-eventlogging_service_uri: http://localhost:8085
+event_service_uri: http://localhost:32192/v1/events
 skip_updates: false
 proton_uri: https://proton-beta.wmflabs.org
 cxserver_uri: https://cxserver-beta.wmflabs.org

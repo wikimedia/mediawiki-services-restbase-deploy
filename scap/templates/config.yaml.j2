@@ -90,9 +90,9 @@ default_project: &default_project
                   recommendation: &recommendation_options
                     host: <%= recommendation_uri %>
                   events: &events_options
-                    uri: <%= eventlogging_service_uri %>
-                    topic: resource_change
-                    transcludes_topic: change-prop.transcludes.resource-change
+                    uri: <%= event_service_uri %>
+                    stream: resource_change
+                    transcludes_stream: change-prop.transcludes.resource-change
                   summary:
                     host: <%= mobileapps_uri %>
                     implementation: <%= summary_impl %>
