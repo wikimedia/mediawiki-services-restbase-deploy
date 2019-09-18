@@ -21,7 +21,8 @@ cassandra_tls:
 parsoid_uri: https://parsoid-beta.wmflabs.org
 graphoid_uri: https://graphoid-beta.wmflabs.org
 mathoid_uri: https://mathoid-beta.wmflabs.org
-mobileapps_uri: https://appservice.wmflabs.org
+mobileapps_uri: https://mobileapps.wmflabs.org
+wikifeeds_uri: https://wikifeeds.wmflabs.org
 citoid_uri: https://citoid-beta.wmflabs.org
 event_service_uri: http://localhost:32192/v1/events
 skip_updates: false
