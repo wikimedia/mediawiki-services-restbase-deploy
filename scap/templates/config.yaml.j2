@@ -165,6 +165,8 @@ wikipedia.org: &wikipedia.org
             x-modules:
               - path: projects/v1/wikipedia.wmf.yaml
                 options: *default_options
+              - path: projects/proxy.yaml
+                options: *proxy_options
           /{api:sys}: *default_sys
 
 # A different project template, sharing configuration options.
@@ -179,6 +181,8 @@ wikimedia.org: &wikimedia.org
                     <<: *default_options
                     pageviews:
                       host: <%= aqs_uri %>
+              - path: projects/proxy.yaml
+                options: *proxy_options
           /{api:sys}:
             x-modules:
               - path: projects/proxy.yaml
@@ -214,6 +218,8 @@ wikidata.org: &wikidata.org
             x-modules:
               - path: projects/v1/wikidata.wmf.yaml
                 options: *default_options
+              - path: projects/proxy.yaml
+                options: *proxy_options
           /{api:sys}: *default_sys
 
 # wiktionaries config
@@ -225,6 +231,8 @@ wiktionary: &wiktionary_project
             x-modules:
               - path: projects/v1/wiktionary.wmf.yaml
                 options: *default_options
+              - path: projects/proxy.yaml
+                options: *proxy_options
           /{api:sys}: *default_sys
 
 # wikivoyage config
@@ -236,6 +244,8 @@ wikivoyage: &wikivoyage_project
             x-modules:
               - path: projects/v1/wikivoyage.wmf.yaml
                 options: *default_options
+              - path: projects/proxy.yaml
+                options: *proxy_options
           /{api:sys}: *default_sys
 
 # commons config
