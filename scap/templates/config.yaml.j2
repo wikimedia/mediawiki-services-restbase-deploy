@@ -320,6 +320,7 @@ services:
     module: hyperswitch
     conf: &rb_conf
       port: <%= port %>
+      skip_resources: true
       spec: *root_spec
       salt: <%= salt_key %>
       default_page_size: <%= page_size %>
