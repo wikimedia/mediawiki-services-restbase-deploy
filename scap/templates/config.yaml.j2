@@ -73,6 +73,11 @@ default_project: &default_project
                     host: <%= parsoid_uri %>
                     grace_ttl: 86400
                     stash_ratelimit: <%= stash_ratelimit %>
+                    php_host: <%= parsoidphp_uri %>
+                    proxy:
+                      default_variant: js
+                      mode: mirror
+                      percentage: <%= parsoidphp_mirror_percentage %>
                   action:
                     apiUriTemplate: <%= mwapi_uri %>
                     baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
