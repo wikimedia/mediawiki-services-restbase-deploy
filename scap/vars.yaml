@@ -800,9 +800,9 @@ domains:
     fi.wikimedia.org: default_project
     fixcopyright.wikimedia.org: default_project
     foundation.wikimedia.org: default_project
+    ge.wikimedia.org: default_project
     id.wikimedia.org: default_project
     incubator.wikimedia.org: default_project
-    ka.wikimedia.org: default_project
     wikitech.wikimedia.org: default_project
     login.wikimedia.org: default_project
     meta.wikimedia.org: default_project
