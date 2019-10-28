@@ -5,7 +5,7 @@ user_agent: RESTBase/deployment-prep
 storage_groups_ng: []
 cassandra_default_consistency: localOne
 parsoidphp_uri: http://deployment-mediawiki-parsoid10/w/rest.php
-parsoidphp_mirror_percentage: 50
+parsoidphp_mirror_percentage: 100
 domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: wikipedia.org
