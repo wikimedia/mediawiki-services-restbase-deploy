@@ -19,9 +19,8 @@ cassandra_password: cassandra
 cassandra_default_consistency: localQuorum
 cassandra_tls:
 parsoid_uri: https://parsoid-beta.wmflabs.org
-# MW is not active-active, so always use the eqiad cluster for Parsoid/PHP
-parsoidphp_uri: https://parsoid.svc.eqiad.wmnet/w/rest.php
-parsoidphp_mirror_percentage: 0
+parsoidphp_uri: https://parsoid-php.discovery.wmnet/w/rest.php
+parsoidphp_mirror_percentage: 10
 graphoid_uri: https://graphoid-beta.wmflabs.org
 mathoid_uri: https://mathoid-beta.wmflabs.org
 mobileapps_uri: https://mobileapps.wmflabs.org
