@@ -134,6 +134,7 @@ domains:
     ga.wikipedia.org: wikipedia.org
     gag.wikipedia.org: wikipedia.org
     gan.wikipedia.org: wikipedia.org
+    gcr.wikipedia.org: wikipedia.org
     gd.wikipedia.org: wikipedia.org
     gl.wikipedia.org: wikipedia.org
     glk.wikipedia.org: wikipedia.org
@@ -459,6 +460,7 @@ domains:
     sd.wiktionary.org: wiktionary_project
     sg.wiktionary.org: wiktionary_project
     sh.wiktionary.org: wiktionary_project
+    shy.wiktionary.org: wiktionary_project
     si.wiktionary.org: wiktionary_project
     simple.wiktionary.org: wiktionary_project
     sk.wiktionary.org: wiktionary_project
