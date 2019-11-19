@@ -78,8 +78,9 @@ default_project: &default_project
                       default_variant: js
                       mode: split
                       pattern:
-                        - /^test2?\.wikipedia\.org$/
-                      percentage: <%= parsoidphp_mirror_percentage %>
+<%- for pattern in parsoidphp_split_pattern %>
+                        - <%= pattern %>
+<%- endfor  %>
                   action:
                     apiUriTemplate: <%= mwapi_uri %>
                     baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
