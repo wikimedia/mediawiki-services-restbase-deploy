@@ -76,7 +76,9 @@ default_project: &default_project
                     php_host: <%= parsoidphp_uri %>
                     proxy:
                       default_variant: js
-                      mode: mirror
+                      mode: split
+                      pattern:
+                        - /^test2?\.wikipedia\.org$/
                       percentage: <%= parsoidphp_mirror_percentage %>
                   action:
                     apiUriTemplate: <%= mwapi_uri %>
