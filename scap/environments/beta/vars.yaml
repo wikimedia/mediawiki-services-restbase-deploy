@@ -6,7 +6,7 @@ storage_groups_ng: []
 cassandra_default_consistency: localOne
 parsoidphp_uri: http://deployment-mediawiki-parsoid10/w/rest.php
 parsoidphp_split_pattern:
-  - /^$/
+  - /./
 domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: wikipedia.org

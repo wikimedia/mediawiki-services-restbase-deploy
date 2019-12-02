@@ -21,7 +21,7 @@ cassandra_tls:
 parsoid_uri: https://parsoid-beta.wmflabs.org
 parsoidphp_uri: https://parsoid-php.discovery.wmnet/w/rest.php
 parsoidphp_split_pattern:
-  - /^en\.wikipedia\.org$/
+  - /./
 graphoid_uri: https://graphoid-beta.wmflabs.org
 mathoid_uri: https://mathoid-beta.wmflabs.org
 mobileapps_uri: https://mobileapps.wmflabs.org
