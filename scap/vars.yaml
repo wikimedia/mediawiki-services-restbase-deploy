@@ -21,7 +21,7 @@ cassandra_tls:
 parsoid_uri: https://parsoid-beta.wmflabs.org
 parsoidphp_uri: https://parsoid-php.discovery.wmnet/w/rest.php
 parsoidphp_split_pattern:
-  - /^(?:ca|he|test2?)\.wikipedia\.org$/
+  - /^(?:ca|he|ru|sr|zh|test2?)\.wikipedia\.org$/
   - /mediawiki\.org$/
   - /\.wiktionary\.org$/
   - /\.wikiquote\.org$/
