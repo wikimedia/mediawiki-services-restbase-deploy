@@ -4,9 +4,7 @@ page_size: 10
 user_agent: RESTBase/deployment-prep
 storage_groups_ng: []
 cassandra_default_consistency: localOne
-parsoidphp_uri: http://deployment-mediawiki-parsoid10/w/rest.php
-parsoidphp_split_pattern:
-  - /./
+parsoidphp_uri: http://deployment-mediawiki-parsoid10.deployment-prep.eqiad.wmflabs/w/rest.php
 domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: wikipedia.org
