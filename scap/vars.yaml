@@ -18,8 +18,7 @@ cassandra_user: cassandra
 cassandra_password: cassandra
 cassandra_default_consistency: localQuorum
 cassandra_tls:
-parsoid_uri: https://parsoid-beta.wmflabs.org
-parsoidphp_uri: https://parsoid-php.discovery.wmnet/w/rest.php
+parsoid_uri: https://en.wikipedia.beta.wmflabs.org/w/rest.php
 graphoid_uri: https://graphoid-beta.wmflabs.org
 mathoid_uri: https://mathoid-beta.wmflabs.org
 mobileapps_uri: https://mobileapps.wmflabs.org

@@ -70,7 +70,7 @@ default_project: &default_project
               - path: projects/v1/default.wmf.yaml
                 options: &default_options
                   parsoid:
-                    host: <%= parsoidphp_uri %>
+                    host: <%= parsoid_uri %>
                     grace_ttl: 86400
                     stash_ratelimit: <%= stash_ratelimit %>
                   action:
@@ -283,8 +283,6 @@ root_spec: &root_spec
           - pattern: <%= mwapi_uri %>
             forward_headers: true
           - pattern: <%= parsoid_uri %>
-            forward_headers: true
-          - pattern: <%= parsoidphp_uri %>
             forward_headers: true
           - pattern: <%= aqs_uri %>
             forward_headers:
