@@ -812,6 +812,7 @@ domains:
     meta.wikimedia.org: default_project
     mk.wikimedia.org: default_project
     mx.wikimedia.org: default_project
+    ng.wikimedia.org: default_project
     nl.wikimedia.org: default_project
     no.wikimedia.org: default_project
     nyc.wikimedia.org: default_project
