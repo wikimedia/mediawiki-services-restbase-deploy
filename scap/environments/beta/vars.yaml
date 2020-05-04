@@ -42,6 +42,7 @@ domains:
     sv.wikipedia.beta.wmflabs.org: wikipedia.org
     test.wikimedia.beta.wmflabs.org: default_project
     uk.wikipedia.beta.wmflabs.org: wikipedia.org
+    vi.wikipedia.beta.wmflabs.org: wikipedia.org
     wikidata.beta.wmflabs.org: wikidata.org
     zero.wikimedia.beta.wmflabs.org: default_project
     zh.wikipedia.beta.wmflabs.org: wikipedia.org
