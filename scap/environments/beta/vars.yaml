@@ -8,6 +8,7 @@ parsoid_uri: http://deployment-parsoid11.deployment-prep.eqiad.wmflabs/w/rest.ph
 domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: wikipedia.org
+    api.wikimedia.beta.wmflabs.org: default_project
     ar.wikipedia.beta.wmflabs.org: wikipedia.org
     ca.wikipedia.beta.wmflabs.org: wikipedia.org
     cs.wikipedia.beta.wmflabs.org: wikipedia.org
