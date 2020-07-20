@@ -57,6 +57,7 @@ domains:
     ang.wikipedia.org: wikipedia.org
     ar.wikipedia.org: wikipedia.org
     arc.wikipedia.org: wikipedia.org
+    ary.wikipedia.org: wikipedia.org
     arz.wikipedia.org: wikipedia.org
     as.wikipedia.org: wikipedia.org
     ast.wikipedia.org: wikipedia.org
@@ -298,6 +299,7 @@ domains:
     su.wikipedia.org: wikipedia.org
     sv.wikipedia.org: wikipedia.org
     sw.wikipedia.org: wikipedia.org
+    sysop-it.wikipedia.org: wikipedia.org
     szl.wikipedia.org: wikipedia.org
     szy.wikipedia.org: wikipedia.org
     ta.wikipedia.org: wikipedia.org
@@ -609,6 +611,7 @@ domains:
     ko.wikisource.org: default_project
     la.wikisource.org: default_project
     li.wikisource.org: default_project
+    lij.wikisource.org: default_project
     lt.wikisource.org: default_project
     mk.wikisource.org: default_project
     ml.wikisource.org: default_project
