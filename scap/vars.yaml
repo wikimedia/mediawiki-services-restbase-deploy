@@ -845,6 +845,7 @@ domains:
     wikimania2018.wikimedia.org: default_project
     wikimania.wikimedia.org: default_project
   Specials:
+    api.wikimedia.org: default_project
     www.mediawiki.org: default_project
     wikisource.org: default_project
     beta.wikiversity.org: default_project
