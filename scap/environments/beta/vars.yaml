@@ -9,6 +9,7 @@ domains:
   BetaCluster:
     aa.wikipedia.beta.wmflabs.org: wikipedia.org
     ar.wikipedia.beta.wmflabs.org: wikipedia.org
+    bn.wikipedia.beta.wmflabs.org: wikipedia.org
     ca.wikipedia.beta.wmflabs.org: wikipedia.org
     cs.wikipedia.beta.wmflabs.org: wikipedia.org
     commons.wikimedia.beta.wmflabs.org: commons_project
