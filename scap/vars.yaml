@@ -644,6 +644,7 @@ domains:
     vec.wikisource.org: default_project
     vi.wikisource.org: default_project
     yi.wikisource.org: default_project
+    wa.wikisource.org: default_project
     zh.wikisource.org: default_project
     zh-min-nan.wikisource.org: default_project
   Wikibooks:
