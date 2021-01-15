@@ -236,6 +236,7 @@ domains:
     nds-nl.wikipedia.org: wikipedia.org
     ne.wikipedia.org: wikipedia.org
     new.wikipedia.org: wikipedia.org
+    nia.wikipedia.org: wikipedia.org
     nl.wikipedia.org: wikipedia.org
     nn.wikipedia.org: wikipedia.org
     no.wikipedia.org: wikipedia.org
@@ -366,6 +367,7 @@ domains:
     ast.wiktionary.org: wiktionary_project
     ay.wiktionary.org: wiktionary_project
     az.wiktionary.org: wiktionary_project
+    bcl.wiktionary.org: wiktionary_project
     be.wiktionary.org: wiktionary_project
     bg.wiktionary.org: wiktionary_project
     bn.wiktionary.org: wiktionary_project
@@ -379,6 +381,7 @@ domains:
     cy.wiktionary.org: wiktionary_project
     da.wiktionary.org: wiktionary_project
     de.wiktionary.org: wiktionary_project
+    diq.wiktionary.org: wiktionary_project
     dv.wiktionary.org: wiktionary_project
     el.wiktionary.org: wiktionary_project
     en.wiktionary.org: wiktionary_project
@@ -448,6 +451,7 @@ domains:
     nah.wiktionary.org: wiktionary_project
     nds.wiktionary.org: wiktionary_project
     ne.wiktionary.org: wiktionary_project
+    nia.wiktionary.org: wiktionary_project
     nl.wiktionary.org: wiktionary_project
     nn.wiktionary.org: wiktionary_project
     no.wiktionary.org: wiktionary_project
