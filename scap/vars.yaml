@@ -52,6 +52,7 @@ domains:
     af.wikipedia.org: wikipedia.org
     ak.wikipedia.org: wikipedia.org
     als.wikipedia.org: wikipedia.org
+    alt.wikipeda.org: wikipedia.org
     am.wikipedia.org: wikipedia.org
     an.wikipedia.org: wikipedia.org
     ang.wikipedia.org: wikipedia.org
@@ -220,6 +221,7 @@ domains:
     mk.wikipedia.org: wikipedia.org
     ml.wikipedia.org: wikipedia.org
     mn.wikipedia.org: wikipedia.org
+    mni.wikipedia.org: wikipedia.org
     mnw.wikipedia.org: wikipedia.org
     mr.wikipedia.org: wikipedia.org
     mrj.wikipedia.org: wikipedia.org
@@ -309,6 +311,7 @@ domains:
     szl.wikipedia.org: wikipedia.org
     szy.wikipedia.org: wikipedia.org
     ta.wikipedia.org: wikipedia.org
+    tay.wikipedia.org: wikipedia.org
     tcy.wikipedia.org: wikipedia.org
     te.wikipedia.org: wikipedia.org
     tet.wikipedia.org: wikipedia.org
@@ -322,6 +325,7 @@ domains:
     to.wikipedia.org: wikipedia.org
     tpi.wikipedia.org: wikipedia.org
     tr.wikipedia.org: wikipedia.org
+    trv.wikipedia.org: wikipedia.org
     ts.wikipedia.org: wikipedia.org
     tt.wikipedia.org: wikipedia.org
     tum.wikipedia.org: wikipedia.org
@@ -443,6 +447,8 @@ domains:
     mk.wiktionary.org: wiktionary_project
     ml.wiktionary.org: wiktionary_project
     mn.wiktionary.org: wiktionary_project
+    mni.wiktionary.org: wiktionary_project
+    mnw.wiktionary.org: wiktionary_project
     mr.wiktionary.org: wiktionary_project
     ms.wiktionary.org: wiktionary_project
     mt.wiktionary.org: wiktionary_project
