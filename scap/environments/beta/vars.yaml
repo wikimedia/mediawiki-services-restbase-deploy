@@ -14,7 +14,6 @@ domains:
     ca.wikipedia.beta.wmflabs.org: wikipedia.org
     cs.wikipedia.beta.wmflabs.org: wikipedia.org
     commons.wikimedia.beta.wmflabs.org: commons_project
-    deployment.wikimedia.beta.wmflabs.org: default_project
     de.wikipedia.beta.wmflabs.org: wikipedia.org
     de.wiktionary.beta.wmflabs.org: wiktionary_project
     en-rtl.wikipedia.beta.wmflabs.org: wikipedia.org
