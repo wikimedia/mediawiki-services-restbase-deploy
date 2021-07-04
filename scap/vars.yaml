@@ -106,6 +106,7 @@ domains:
     cv.wikipedia.org: wikipedia.org
     cy.wikipedia.org: wikipedia.org
     da.wikipedia.org: wikipedia.org
+    dag.wikipedia.org: wikipedia.org
     de.wikipedia.org: wikipedia.org
     din.wikipedia.org: wikipedia.org
     diq.wikipedia.org: wikipedia.org
@@ -288,6 +289,7 @@ domains:
     se.wikipedia.org: wikipedia.org
     sg.wikipedia.org: wikipedia.org
     sh.wikipedia.org: wikipedia.org
+    shi.wikipedia.org: wikipedia.org
     shn.wikipedia.org: wikipedia.org
     si.wikipedia.org: wikipedia.org
     simple.wikipedia.org: wikipedia.org
@@ -593,6 +595,7 @@ domains:
     ar.wikisource.org: default_project
     as.wikisource.org: default_project
     az.wikisource.org: default_project
+    ban.wikisource.org: default_project
     be.wikisource.org: default_project
     bg.wikisource.org: default_project
     bn.wikisource.org: default_project
