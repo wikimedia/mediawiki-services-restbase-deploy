@@ -2,7 +2,6 @@
 
 var constants = require('./constants');
 var hat = require('hat');
-var merge = require('merge');
 
 /**
  * Represents a [JSON-RPC 2.0](http://www.jsonrpc.org/specification) request or
@@ -35,7 +34,7 @@ function Message(spec) {
     this.params = spec.params;
   } else if (Message.isResponse(spec)) {
     this.id = spec.id;
-    this.result = merge({}, spec.result);
+    this.result = Object.assign({}, spec.result);
     if (spec.error) {
       this.error = {
         code: -32603,

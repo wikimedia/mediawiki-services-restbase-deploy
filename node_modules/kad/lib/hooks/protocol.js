@@ -1,7 +1,6 @@
 'use strict';
 
 var assert = require('assert');
-var merge = require('merge');
 var Message = require('../message');
 
 /**
@@ -33,7 +32,7 @@ module.exports = function ProtocolFactory(protocolspec) {
     method.call(rpc, message.params, function(err, result) {
       var reply = new Message({
         error: err,
-        result:  merge({ contact: rpc._contact }, result),
+        result:  Object.assign({ contact: rpc._contact }, result),
         id: message.id
       });
 

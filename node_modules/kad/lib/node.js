@@ -1,6 +1,5 @@
 'use strict';
 
-var merge = require('merge');
 var assert = require('assert');
 var async = require('async');
 var inherits = require('util').inherits;
@@ -22,7 +21,7 @@ var Logger = require('./logger');
  * @param {Function} options.validator - Key-Value validation function
  */
 function Node(options) {
-  options = merge(Object.create(Node.DEFAULTS), options);
+  options = Object.assign(Object.create(Node.DEFAULTS), options);
 
   if (!(this instanceof Node)) {
     return new Node(options);
