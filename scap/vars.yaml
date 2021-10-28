@@ -54,6 +54,7 @@ domains:
     als.wikipedia.org: wikipedia.org
     alt.wikipedia.org: wikipedia.org
     am.wikipedia.org: wikipedia.org
+    ami.wikipedia.org: wikipedia.org
     an.wikipedia.org: wikipedia.org
     ang.wikipedia.org: wikipedia.org
     ar.wikipedia.org: wikipedia.org
@@ -269,6 +270,7 @@ domains:
     pnt.wikipedia.org: wikipedia.org
     ps.wikipedia.org: wikipedia.org
     pt.wikipedia.org: wikipedia.org
+    pwn.wikipedia.org: wikipedia.org
     qu.wikipedia.org: wikipedia.org
     rm.wikipedia.org: wikipedia.org
     rmy.wikipedia.org: wikipedia.org
@@ -439,6 +441,7 @@ domains:
     la.wiktionary.org: wiktionary_project
     lb.wiktionary.org: wiktionary_project
     li.wiktionary.org: wiktionary_project
+    lmo.wiktionary.org: wiktionary_project
     ln.wiktionary.org: wiktionary_project
     lo.wiktionary.org: wiktionary_project
     lt.wiktionary.org: wiktionary_project
