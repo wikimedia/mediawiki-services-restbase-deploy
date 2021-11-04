@@ -145,7 +145,7 @@ default_project: &default_project
                               password: <%= cassandra_password %>
                               defaultConsistency: <%= cassandra_default_consistency %>
                               skip_schema_update: true
-                              <% if cassandra_tls is not none and cassandra_tls|length > 0 %>tls:<% for key, value in cassandra_tls.iteritems() %>
+                              <% if cassandra_tls is not none and cassandra_tls|length > 0 %>tls:<% for key, value in cassandra_tls.items() %>
                                 <%= key %>: <%= value -%>
 <% endfor -%>
 <% endif %>
@@ -290,10 +290,10 @@ root_spec: &root_spec
                 user-agent: true
           - pattern: /^https?:\/\//
   paths:
-  <%- for block, bdomains in domains.iteritems() %>
+  <%- for block, bdomains in domains.items() %>
 
     # <%= block %>
-    <%- for domain, project in bdomains.iteritems() %>
+    <%- for domain, project in bdomains.items() %>
     /{domain:<%= domain %>}: *<%= project -%>
     <% endfor %>
   <%- endfor %>
