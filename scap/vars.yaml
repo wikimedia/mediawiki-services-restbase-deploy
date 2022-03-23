@@ -147,6 +147,7 @@ domains:
     gor.wikipedia.org: wikipedia.org
     got.wikipedia.org: wikipedia.org
     gu.wikipedia.org: wikipedia.org
+    guw.wikipedia.org: wikipedia.org
     gv.wikipedia.org: wikipedia.org
     ha.wikipedia.org: wikipedia.org
     hak.wikipedia.org: wikipedia.org
@@ -815,6 +816,7 @@ domains:
     pt.wikivoyage.org: wikivoyage_project
     ro.wikivoyage.org: wikivoyage_project
     ru.wikivoyage.org: wikivoyage_project
+    shn.wikivoyage.org: wikivoyage_project
     sv.wikivoyage.org: wikivoyage_project
     tr.wikivoyage.org: wikivoyage_project
     uk.wikivoyage.org: wikivoyage_project
