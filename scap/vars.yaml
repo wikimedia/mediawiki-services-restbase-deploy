@@ -427,6 +427,7 @@ domains:
     ia.wiktionary.org: wiktionary_project
     id.wiktionary.org: wiktionary_project
     ie.wiktionary.org: wiktionary_project
+    ig.wiktionary.org: wiktionary_project
     io.wiktionary.org: wiktionary_project
     is.wiktionary.org: wiktionary_project
     it.wiktionary.org: wiktionary_project
@@ -536,8 +537,10 @@ domains:
     af.wikiquote.org: default_project
     ar.wikiquote.org: default_project
     az.wikiquote.org: default_project
+    bcl.wikiquote.org: default_project
     be.wikiquote.org: default_project
     bg.wikiquote.org: default_project
+    bn.wikiquote.org: default_project
     br.wikiquote.org: default_project
     bs.wikiquote.org: default_project
     ca.wikiquote.org: default_project
@@ -562,6 +565,7 @@ domains:
     hu.wikiquote.org: default_project
     hy.wikiquote.org: default_project
     id.wikiquote.org: default_project
+    ig.wikiquote.org: default_project
     is.wikiquote.org: default_project
     it.wikiquote.org: default_project
     ja.wikiquote.org: default_project
@@ -593,6 +597,7 @@ domains:
     ta.wikiquote.org: default_project
     te.wikiquote.org: default_project
     th.wikiquote.org: default_project
+    tl.wikiquote.org: default_project
     tr.wikiquote.org: default_project
     uk.wikiquote.org: default_project
     ur.wikiquote.org: default_project
