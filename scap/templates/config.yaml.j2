@@ -171,6 +171,21 @@ wikipedia.org: &wikipedia.org
                 options: *proxy_options
           /{api:sys}: *default_sys
 
+# RESTBase sunset
+# A separate project for wikipedias with disabled storage
+wikipedia.org_no_storage: &wikipedia.org_no_storage
+  x-modules:
+    - spec:
+        paths:
+          /{api:v1}:
+            x-modules:
+              - path: projects/v1/wikipedia.wmf.yaml
+                <<: *default_options
+                disabled_storage: true
+              - path: projects/proxy.yaml
+                options: *proxy_options
+          /{api:sys}: *default_sys
+
 # A different project template, sharing configuration options.
 wikimedia.org: &wikimedia.org
   x-modules:

@@ -368,7 +368,7 @@ domains:
     zh-yue.wikipedia.org: wikipedia.org
     zu.wikipedia.org: wikipedia.org
     nostalgia.wikipedia.org: wikipedia.org
-    test.wikipedia.org: wikipedia.org
+    test.wikipedia.org: wikipedia.org_no_storage
     test2.wikipedia.org: wikipedia.org
   Wiktionary:
     af.wiktionary.org: wiktionary_project

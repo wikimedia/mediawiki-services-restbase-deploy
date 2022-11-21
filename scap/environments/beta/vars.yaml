@@ -14,7 +14,7 @@ domains:
     ca.wikipedia.beta.wmflabs.org: wikipedia.org
     cs.wikipedia.beta.wmflabs.org: wikipedia.org
     commons.wikimedia.beta.wmflabs.org: commons_project
-    de.wikipedia.beta.wmflabs.org: wikipedia.org
+    de.wikipedia.beta.wmflabs.org: wikipedia.org_no_storage
     de.wiktionary.beta.wmflabs.org: wiktionary_project
     en-rtl.wikipedia.beta.wmflabs.org: wikipedia.org
     en.wikibooks.beta.wmflabs.org: default_project
@@ -26,7 +26,7 @@ domains:
     en.wikiversity.beta.wmflabs.org: default_project
     en.wikivoyage.beta.wmflabs.org: wikivoyage_project
     eo.wikipedia.beta.wmflabs.org: wikipedia.org
-    es.wikipedia.beta.wmflabs.org: wikipedia.org
+    es.wikipedia.beta.wmflabs.org: wikipedia.org_no_storage
     fa.wikipedia.beta.wmflabs.org: wikipedia.org
     he.wikipedia.beta.wmflabs.org: wikipedia.org
     he.wiktionary.beta.wmflabs.org: wiktionary_project
