@@ -180,8 +180,9 @@ wikipedia.org_no_storage: &wikipedia.org_no_storage
           /{api:v1}:
             x-modules:
               - path: projects/v1/wikipedia.wmf.yaml
-                <<: *default_options
-                disabled_storage: true
+                options:
+                  <<: *default_options
+                  disabled_storage: true
               - path: projects/proxy.yaml
                 options: *proxy_options
           /{api:sys}: *default_sys
