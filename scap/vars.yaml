@@ -413,6 +413,7 @@ domains:
     gl.wiktionary.org: wiktionary_project
     gn.wiktionary.org: wiktionary_project
     gom.wiktionary.org: wiktionary_project
+    gor.wiktionary.org: wiktionary_project
     gu.wiktionary.org: wiktionary_project
     guw.wiktionary.org: wiktionary_project
     gv.wiktionary.org: wiktionary_project
@@ -536,6 +537,7 @@ domains:
   Wikiquote:
     af.wikiquote.org: default_project
     ar.wikiquote.org: default_project
+    as.wikiquote.org: default_project
     az.wikiquote.org: default_project
     bcl.wikiquote.org: default_project
     be.wikiquote.org: default_project
@@ -559,6 +561,7 @@ domains:
     fr.wikiquote.org: default_project
     gl.wikiquote.org: default_project
     gu.wikiquote.org: default_project
+    guw.wikiquote.org: default_project
     he.wikiquote.org: default_project
     hi.wikiquote.org: default_project
     hr.wikiquote.org: default_project
@@ -738,6 +741,7 @@ domains:
     ro.wikibooks.org: default_project
     ru.wikibooks.org: default_project
     sa.wikibooks.org: default_project
+    shn.wikibooks.org: default_project
     si.wikibooks.org: default_project
     sk.wikibooks.org: default_project
     sl.wikibooks.org: default_project
