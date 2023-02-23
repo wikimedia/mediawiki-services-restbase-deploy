@@ -839,6 +839,7 @@ domains:
   Wikimedia:
     am.wikimedia.org: default_project
     ar.wikimedia.org: default_project
+    az.wikimedia.org: default_project
     bd.wikimedia.org: default_project
     be.wikimedia.org: default_project
     br.wikimedia.org: default_project
