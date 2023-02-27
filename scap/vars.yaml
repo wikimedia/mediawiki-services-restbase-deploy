@@ -148,6 +148,8 @@ domains:
     gor.wikipedia.org: wikipedia.org
     got.wikipedia.org: wikipedia.org
     gu.wikipedia.org: wikipedia.org
+    guc.wikipedia.org: wikipedia.org
+    gur.wikipedia.org: wikipedia.org
     guw.wikipedia.org: wikipedia.org
     gv.wikipedia.org: wikipedia.org
     ha.wikipedia.org: wikipedia.org
@@ -878,6 +880,7 @@ domains:
     species.wikimedia.org: default_project
     tr.wikimedia.org: default_project
     ua.wikimedia.org: default_project
+    ve.wikimedia.org: default_project
     vote.wikimedia.org: default_project
     wikimania2014.wikimedia.org: default_project
     wikimania2015.wikimedia.org: default_project
