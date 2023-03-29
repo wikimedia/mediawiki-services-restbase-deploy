@@ -57,6 +57,7 @@ domains:
     ami.wikipedia.org: wikipedia.org
     an.wikipedia.org: wikipedia.org
     ang.wikipedia.org: wikipedia.org
+    anp.wikipedia.org: wikipedia.org
     ar.wikipedia.org: wikipedia.org
     arc.wikipedia.org: wikipedia.org
     ary.wikipedia.org: wikipedia.org
@@ -390,6 +391,7 @@ domains:
     bs.wiktionary.org: wiktionary_project
     ca.wiktionary.org: wiktionary_project
     chr.wiktionary.org: wiktionary_project
+    ckb.wiktionary.org: wiktionary_project
     co.wiktionary.org: wiktionary_project
     cs.wiktionary.org: wiktionary_project
     csb.wiktionary.org: wiktionary_project
