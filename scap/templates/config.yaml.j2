@@ -84,6 +84,7 @@ default_project: &default_project
                     cache-control: s-maxage=864000, max-age=86400
                   mobileapps:
                     host: <%= mobileapps_uri %>
+                    cache_control: <%= mobileapps_cache_control %>
                     storage: new
                   wikifeeds:
                     host: <%= wikifeeds_uri %>

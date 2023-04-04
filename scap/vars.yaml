@@ -22,6 +22,7 @@ parsoid_uri: https://en.wikipedia.beta.wmflabs.org/w/rest.php
 graphoid_uri: https://graphoid-beta.wmflabs.org
 mathoid_uri: https://mathoid-beta.wmflabs.org
 mobileapps_uri: https://mobileapps.wmflabs.org
+mobileapps_cache_control: 's-maxage=1209600, max-age=0'
 wikifeeds_uri: https://wikifeeds.wmflabs.org
 citoid_uri: https://citoid-beta.wmflabs.org
 event_service_uri: http://localhost:32192/v1/events
