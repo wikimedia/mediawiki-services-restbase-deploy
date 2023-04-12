@@ -104,7 +104,7 @@ domains:
     co.wikipedia.org: wikipedia.org
     cr.wikipedia.org: wikipedia.org
     crh.wikipedia.org: wikipedia.org
-    cs.wikipedia.org: wikipedia.org_no_storage
+    cs.wikipedia.org: wikipedia.org
     csb.wikipedia.org: wikipedia.org
     cu.wikipedia.org: wikipedia.org
     cv.wikipedia.org: wikipedia.org
@@ -129,7 +129,7 @@ domains:
     ext.wikipedia.org: wikipedia.org
     fa.wikipedia.org: wikipedia.org
     ff.wikipedia.org: wikipedia.org
-    fi.wikipedia.org: wikipedia.org_no_storage
+    fi.wikipedia.org: wikipedia.org
     fiu-vro.wikipedia.org: wikipedia.org
     fj.wikipedia.org: wikipedia.org
     fo.wikipedia.org: wikipedia.org
@@ -157,7 +157,7 @@ domains:
     ha.wikipedia.org: wikipedia.org
     hak.wikipedia.org: wikipedia.org
     haw.wikipedia.org: wikipedia.org
-    he.wikipedia.org: wikipedia.org_no_storage
+    he.wikipedia.org: wikipedia.org
     hi.wikipedia.org: wikipedia.org
     hif.wikipedia.org: wikipedia.org
     hr.wikipedia.org: wikipedia.org
@@ -277,7 +277,7 @@ domains:
     pnb.wikipedia.org: wikipedia.org
     pnt.wikipedia.org: wikipedia.org
     ps.wikipedia.org: wikipedia.org
-    pt.wikipedia.org: wikipedia.org_no_storage
+    pt.wikipedia.org: wikipedia.org
     pwn.wikipedia.org: wikipedia.org
     qu.wikipedia.org: wikipedia.org
     rm.wikipedia.org: wikipedia.org
