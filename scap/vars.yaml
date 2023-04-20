@@ -128,6 +128,7 @@ domains:
     eu.wikipedia.org: wikipedia.org
     ext.wikipedia.org: wikipedia.org
     fa.wikipedia.org: wikipedia.org
+    fat.wikipedia.org: wikipedia.org
     ff.wikipedia.org: wikipedia.org
     fi.wikipedia.org: wikipedia.org
     fiu-vro.wikipedia.org: wikipedia.org
@@ -442,6 +443,8 @@ domains:
     jbo.wiktionary.org: wiktionary_project
     jv.wiktionary.org: wiktionary_project
     ka.wiktionary.org: wiktionary_project
+    kbd.wiktionary.org: wiktionary_project
+    kcg.wiktionary.org: wiktionary_project
     kk.wiktionary.org: wiktionary_project
     kl.wiktionary.org: wiktionary_project
     km.wiktionary.org: wiktionary_project
@@ -778,6 +781,7 @@ domains:
     fa.wikinews.org: default_project
     fi.wikinews.org: default_project
     fr.wikinews.org: default_project
+    guw.wikinews.org: default_project
     he.wikinews.org: default_project
     it.wikinews.org: default_project
     ja.wikinews.org: default_project
