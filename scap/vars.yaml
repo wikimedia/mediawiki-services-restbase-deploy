@@ -150,6 +150,7 @@ domains:
     gom.wikipedia.org: wikipedia.org
     gor.wikipedia.org: wikipedia.org
     got.wikipedia.org: wikipedia.org
+    gpe.wikipedia.org: wikipedia.org
     gu.wikipedia.org: wikipedia.org
     guc.wikipedia.org: wikipedia.org
     gur.wikipedia.org: wikipedia.org
@@ -391,6 +392,7 @@ domains:
     bn.wiktionary.org: wiktionary_project
     br.wiktionary.org: wiktionary_project
     bs.wiktionary.org: wiktionary_project
+    btm.wiktionary.org: wiktionary_project
     ca.wiktionary.org: wiktionary_project
     chr.wiktionary.org: wiktionary_project
     ckb.wiktionary.org: wiktionary_project
