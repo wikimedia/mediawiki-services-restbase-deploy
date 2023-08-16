@@ -335,6 +335,7 @@ domains:
     ti.wikipedia.org: wikipedia.org
     tk.wikipedia.org: wikipedia.org
     tl.wikipedia.org: wikipedia.org
+    tly.wikipedia.org: wikipedia.org
     tn.wikipedia.org: wikipedia.org
     to.wikipedia.org: wikipedia.org
     tpi.wikipedia.org: wikipedia.org
@@ -389,6 +390,7 @@ domains:
     be.wiktionary.org: wiktionary_project
     bg.wiktionary.org: wiktionary_project
     bjn.wiktionary.org: wiktionary_project
+    blk.wiktionary.org: wiktionary_project
     bn.wiktionary.org: wiktionary_project
     br.wiktionary.org: wiktionary_project
     bs.wiktionary.org: wiktionary_project
@@ -679,6 +681,7 @@ domains:
     sk.wikisource.org: default_project
     sl.wikisource.org: default_project
     sr.wikisource.org: default_project
+    su.wikisource.org: default_project
     sv.wikisource.org: default_project
     ta.wikisource.org: default_project
     te.wikisource.org: default_project
