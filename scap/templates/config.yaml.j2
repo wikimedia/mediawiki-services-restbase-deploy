@@ -73,6 +73,10 @@ default_project: &default_project
                     host: <%= parsoid_uri %>
                     grace_ttl: 86400
                     stash_ratelimit: <%= stash_ratelimit %>
+                    disabled_storage:
+                      default: false
+                      test.wikipedia.org: true
+
                   action:
                     apiUriTemplate: <%= mwapi_uri %>
                     baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
