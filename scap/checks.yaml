@@ -9,9 +9,9 @@ checks:
     command: sleep 52
     timeout: 60
   endpoints:
-    type: nrpe
+    type: command
     stage: restart_service
-    command: check_endpoints_restbase
+    command: /usr/lib/nagios/plugins/check_http -I 127.0.0.1 -p 7231
   repool:
     type: command
     stage: restart_service
