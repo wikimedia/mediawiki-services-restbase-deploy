@@ -76,6 +76,7 @@ domains:
     ban.wikipedia.org: wikipedia.org
     bar.wikipedia.org: wikipedia.org
     bat-smg.wikipedia.org: wikipedia.org
+    bbc.wikipedia.org: wikipedia.org
     bcl.wikipedia.org: wikipedia.org
     be.wikipedia.org: wikipedia.org
     be-tarask.wikipedia.org: wikipedia.org
@@ -112,6 +113,7 @@ domains:
     da.wikipedia.org: wikipedia.org
     dag.wikipedia.org: wikipedia.org
     de.wikipedia.org: wikipedia.org
+    dga.wikipedia.org: wikipedia.org
     din.wikipedia.org: wikipedia.org
     diq.wikipedia.org: wikipedia.org
     dsb.wikipedia.org: wikipedia.org
@@ -370,6 +372,7 @@ domains:
     yo.wikipedia.org: wikipedia.org
     za.wikipedia.org: wikipedia.org
     zea.wikipedia.org: wikipedia.org
+    zgh.wikipedia.org: wikipedia.org
     zh.wikipedia.org: wikipedia.org
     zh-classical.wikipedia.org: wikipedia.org
     zh-min-nan.wikipedia.org: wikipedia.org
@@ -555,6 +558,7 @@ domains:
     bcl.wikiquote.org: default_project
     be.wikiquote.org: default_project
     bg.wikiquote.org: default_project
+    bjn.wikiquote.org: default_project
     bn.wikiquote.org: default_project
     br.wikiquote.org: default_project
     bs.wikiquote.org: default_project
