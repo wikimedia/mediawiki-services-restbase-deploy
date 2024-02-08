@@ -74,11 +74,8 @@ default_project: &default_project
                     grace_ttl: 86400
                     stash_ratelimit: <%= stash_ratelimit %>
                     disabled_storage:
-                      default: false
-                      test.wikipedia.org: true
-                      pt.wikipedia.org: true
-                      de.wikipedia.org: true
-                      ja.wikipedia.org: true
+                      default: true
+                      en.wikipedia.org: false
                   action:
                     apiUriTemplate: <%= mwapi_uri %>
                     baseUriTemplate: "{{'https://{domain}/api/rest_v1'}}"
