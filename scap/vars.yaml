@@ -79,6 +79,7 @@ domains:
     bbc.wikipedia.org: wikipedia.org
     bcl.wikipedia.org: wikipedia.org
     be.wikipedia.org: wikipedia.org
+    bew.wikipedia.org: wikipedia.org
     be-tarask.wikipedia.org: wikipedia.org
     bg.wikipedia.org: wikipedia.org
     bh.wikipedia.org: wikipedia.org
@@ -175,6 +176,7 @@ domains:
     id.wikipedia.org: wikipedia.org
     ie.wikipedia.org: wikipedia.org
     ig.wikipedia.org: wikipedia.org
+    igl.wikipedia.org: wikipedia.org
     ik.wikipedia.org: wikipedia.org
     ilo.wikipedia.org: wikipedia.org
     inh.wikipedia.org: wikipedia.org
@@ -204,6 +206,7 @@ domains:
     ks.wikipedia.org: wikipedia.org
     ksh.wikipedia.org: wikipedia.org
     ku.wikipedia.org: wikipedia.org
+    kus.wikipedia.org: wikipedia.org
     kv.wikipedia.org: wikipedia.org
     kw.wikipedia.org: wikipedia.org
     ky.wikipedia.org: wikipedia.org
@@ -451,6 +454,7 @@ domains:
     jbo.wiktionary.org: wiktionary_project
     jv.wiktionary.org: wiktionary_project
     ka.wiktionary.org: wiktionary_project
+    kaa.wiktionary.org: wiktionary_project
     kbd.wiktionary.org: wiktionary_project
     kcg.wiktionary.org: wiktionary_project
     kk.wiktionary.org: wiktionary_project
@@ -662,6 +666,7 @@ domains:
     it.wikisource.org: default_project
     ja.wikisource.org: default_project
     jv.wikisource.org: default_project
+    ka.wikisource.org: default_project
     kn.wikisource.org: default_project
     ko.wikisource.org: default_project
     la.wikisource.org: default_project
@@ -671,6 +676,8 @@ domains:
     mk.wikisource.org: default_project
     ml.wikisource.org: default_project
     mr.wikisource.org: default_project
+    ms.wikisource.org: default_project
+    my.wikisource.org: default_project
     nap.wikisource.org: default_project
     nl.wikisource.org: default_project
     no.wikisource.org: default_project
