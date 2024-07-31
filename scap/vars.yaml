@@ -92,6 +92,7 @@ domains:
     bpy.wikipedia.org: wikipedia.org
     br.wikipedia.org: wikipedia.org
     bs.wikipedia.org: wikipedia.org
+    btm.wikipedia.org: wikipedia.org
     bug.wikipedia.org: wikipedia.org
     bxr.wikipedia.org: wikipedia.org
     ca.wikipedia.org: wikipedia.org
@@ -118,6 +119,7 @@ domains:
     din.wikipedia.org: wikipedia.org
     diq.wikipedia.org: wikipedia.org
     dsb.wikipedia.org: wikipedia.org
+    dtp.wikipedia.org: wikipedia.org
     dty.wikipedia.org: wikipedia.org
     dv.wikipedia.org: wikipedia.org
     dz.wikipedia.org: wikipedia.org
@@ -838,6 +840,7 @@ domains:
   Wikivoyage:
     # Wikivoyage needs MCS and PCS, so to reuse wikipedia.org project for them.
     bn.wikivoyage.org: wikivoyage_project
+    cs.wikivoyage.org: wikivoyage_project
     de.wikivoyage.org: wikivoyage_project
     el.wikivoyage.org: wikivoyage_project
     en.wikivoyage.org: wikivoyage_project
