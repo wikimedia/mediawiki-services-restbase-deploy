@@ -200,8 +200,6 @@ wikimedia.org: &wikimedia.org
               - path: projects/v1/wikimedia.wmf.yaml
                 options:
                     <<: *default_options
-                    pageviews:
-                      host: <%= aqs_uri %>
               - path: projects/proxy.yaml
                 options: *proxy_options
           /{api:sys}:
@@ -303,10 +301,6 @@ root_spec: &root_spec
             forward_headers: true
           - pattern: <%= parsoid_uri %>
             forward_headers: true
-          - pattern: <%= aqs_uri %>
-            forward_headers:
-                x-client-ip: true
-                user-agent: true
           - pattern: /^https?:\/\//
   paths:
   <%- for block, bdomains in domains.items() %>
