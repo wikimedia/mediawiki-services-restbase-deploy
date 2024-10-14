@@ -57,6 +57,7 @@ domains:
     ami.wikipedia.org: wikipedia.org
     an.wikipedia.org: wikipedia.org
     ang.wikipedia.org: wikipedia.org
+    ann.wikipedia.org: wikipedia.org
     anp.wikipedia.org: wikipedia.org
     ar.wikipedia.org: wikipedia.org
     arc.wikipedia.org: wikipedia.org
@@ -175,6 +176,7 @@ domains:
     hy.wikipedia.org: wikipedia.org
     hyw.wikipedia.org: wikipedia.org
     ia.wikipedia.org: wikipedia.org
+    iba.wikipedia.org: wikipedia.org
     id.wikipedia.org: wikipedia.org
     ie.wikipedia.org: wikipedia.org
     ig.wikipedia.org: wikipedia.org
@@ -197,6 +199,7 @@ domains:
     kcg.wikipedia.org: wikipedia.org
     kbp.wikipedia.org: wikipedia.org
     kg.wikipedia.org: wikipedia.org
+    kge.wikipedia.org: wikipedia.org
     ki.wikipedia.org: wikipedia.org
     kk.wikipedia.org: wikipedia.org
     kl.wikipedia.org: wikipedia.org
@@ -242,6 +245,7 @@ domains:
     mn.wikipedia.org: wikipedia.org
     mni.wikipedia.org: wikipedia.org
     mnw.wikipedia.org: wikipedia.org
+    mos.wikipedia.org: wikipedia.org
     mr.wikipedia.org: wikipedia.org
     mrj.wikipedia.org: wikipedia.org
     ms.wikipedia.org: wikipedia.org
@@ -263,6 +267,7 @@ domains:
     no.wikipedia.org: wikipedia.org
     nov.wikipedia.org: wikipedia.org
     nqo.wikipedia.org: wikipedia.org
+    nr.wikipedia.org: wikipedia.org
     nrm.wikipedia.org: wikipedia.org
     nso.wikipedia.org: wikipedia.org
     nv.wikipedia.org: wikipedia.org
@@ -296,6 +301,7 @@ domains:
     ro.wikipedia.org: wikipedia.org
     roa-rup.wikipedia.org: wikipedia.org
     roa-tara.wikipedia.org: wikipedia.org
+    rsk.wikipedia.org: wikipedia.org
     ru.wikipedia.org: wikipedia.org
     rue.wikipedia.org: wikipedia.org
     rw.wikipedia.org: wikipedia.org
@@ -335,6 +341,7 @@ domains:
     ta.wikipedia.org: wikipedia.org
     tay.wikipedia.org: wikipedia.org
     tcy.wikipedia.org: wikipedia.org
+    tdd.wikipedia.org: wikipedia.org
     te.wikipedia.org: wikipedia.org
     tet.wikipedia.org: wikipedia.org
     tg.wikipedia.org: wikipedia.org
@@ -476,6 +483,7 @@ domains:
     lo.wiktionary.org: wiktionary_project
     lt.wiktionary.org: wiktionary_project
     lv.wiktionary.org: wiktionary_project
+    mad.wiktionary.org: wiktionary_project
     mg.wiktionary.org: wiktionary_project
     mi.wiktionary.org: wiktionary_project
     min.wiktionary.org: wiktionary_project
@@ -531,6 +539,7 @@ domains:
     sv.wiktionary.org: wiktionary_project
     sw.wiktionary.org: wiktionary_project
     ta.wiktionary.org: wiktionary_project
+    tcy.wiktionary.org: wiktionary_project
     te.wiktionary.org: wiktionary_project
     tg.wiktionary.org: wiktionary_project
     th.wiktionary.org: wiktionary_project
@@ -583,6 +592,7 @@ domains:
     fi.wikiquote.org: default_project
     fr.wikiquote.org: default_project
     gl.wikiquote.org: default_project
+    gor.wikiquote.org: default_project
     gu.wikiquote.org: default_project
     guw.wikiquote.org: default_project
     he.wikiquote.org: default_project
@@ -636,6 +646,7 @@ domains:
     as.wikisource.org: default_project
     az.wikisource.org: default_project
     ban.wikisource.org: default_project
+    bcl.wikisource.org: default_project
     be.wikisource.org: default_project
     bg.wikisource.org: default_project
     bn.wikisource.org: default_project
@@ -698,6 +709,7 @@ domains:
     su.wikisource.org: default_project
     sv.wikisource.org: default_project
     ta.wikisource.org: default_project
+    tcy.wikisource.org: default_project
     te.wikisource.org: default_project
     th.wikisource.org: default_project
     tr.wikisource.org: default_project
@@ -812,6 +824,7 @@ domains:
     pt.wikinews.org: default_project
     ro.wikinews.org: default_project
     ru.wikinews.org: default_project
+    shn.wikinews.org: default_project
     sq.wikinews.org: default_project
     sr.wikinews.org: default_project
     sv.wikinews.org: default_project
