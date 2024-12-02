@@ -28,6 +28,7 @@ domains:
     eo.wikipedia.beta.wmflabs.org: wikipedia.org
     es.wikipedia.beta.wmflabs.org: wikipedia.org_no_storage
     fa.wikipedia.beta.wmflabs.org: wikipedia.org
+    fr.wikipedia.beta.wmflabs.org: wikipedia.org
     he.wikipedia.beta.wmflabs.org: wikipedia.org
     he.wiktionary.beta.wmflabs.org: wiktionary_project
     hi.wikipedia.beta.wmflabs.org: wikipedia.org
