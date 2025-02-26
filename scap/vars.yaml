@@ -6,6 +6,8 @@ rsyslog_port: 10514
 metrics_name: restbase
 metrics_host: localhost
 metrics_port: 8252
+metrics_prometheus_name: restbase-prometheus
+metrics_prometheus_port: 9102
 # service
 env: production
 mwapi_uri: http://localhost/w/api.php
