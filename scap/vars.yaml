@@ -273,6 +273,7 @@ domains:
     nr.wikipedia.org: wikipedia.org
     nrm.wikipedia.org: wikipedia.org
     nso.wikipedia.org: wikipedia.org
+    nup.wikipedia.org: wikipedia.org
     nv.wikipedia.org: wikipedia.org
     ny.wikipedia.org: wikipedia.org
     oc.wikipedia.org: wikipedia.org
@@ -298,6 +299,7 @@ domains:
     pt.wikipedia.org: wikipedia.org
     pwn.wikipedia.org: wikipedia.org
     qu.wikipedia.org: wikipedia.org
+    rki.wikipedia.org: wikipedia.org
     rm.wikipedia.org: wikipedia.org
     rmy.wikipedia.org: wikipedia.org
     rn.wikipedia.org: wikipedia.org
@@ -358,6 +360,7 @@ domains:
     tly.wikipedia.org: wikipedia.org
     tn.wikipedia.org: wikipedia.org
     to.wikipedia.org: wikipedia.org
+    tok.wikipedia.org: wikipedia.org
     tpi.wikipedia.org: wikipedia.org
     tr.wikipedia.org: wikipedia.org
     trv.wikipedia.org: wikipedia.org
@@ -409,6 +412,7 @@ domains:
     az.wiktionary.org: wiktionary_project
     bcl.wiktionary.org: wiktionary_project
     be.wiktionary.org: wiktionary_project
+    bew.wiktionary.org: wiktionary_project
     bg.wiktionary.org: wiktionary_project
     bjn.wiktionary.org: wiktionary_project
     blk.wiktionary.org: wiktionary_project
@@ -568,6 +572,7 @@ domains:
     wo.wiktionary.org: wiktionary_project
     yi.wiktionary.org: wiktionary_project
     yue.wiktionary.org: wiktionary_project
+    zgh.wiktionary.org: wiktionary_project
     zh.wiktionary.org: wiktionary_project
     zh-min-nan.wiktionary.org: wiktionary_project
     zu.wiktionary.org: wiktionary_project
@@ -620,6 +625,7 @@ domains:
     li.wikiquote.org: default_project
     lt.wikiquote.org: default_project
     ml.wikiquote.org: default_project
+    ms.wikiquote.org: default_project
     mr.wikiquote.org: default_project
     nl.wikiquote.org: default_project
     nn.wikiquote.org: default_project
@@ -692,6 +698,7 @@ domains:
     li.wikisource.org: default_project
     lij.wikisource.org: default_project
     lt.wikisource.org: default_project
+    mad.wikisource.org: default_project
     mk.wikisource.org: default_project
     ml.wikisource.org: default_project
     mr.wikisource.org: default_project
@@ -718,6 +725,7 @@ domains:
     tcy.wikisource.org: default_project
     te.wikisource.org: default_project
     th.wikisource.org: default_project
+    tl.wikisource.org: default_project
     tr.wikisource.org: default_project
     uk.wikisource.org: default_project
     vec.wikisource.org: default_project
@@ -772,6 +780,7 @@ domains:
     li.wikibooks.org: default_project
     lt.wikibooks.org: default_project
     mg.wikibooks.org: default_project
+    min.wikibooks.org: default_project
     mk.wikibooks.org: default_project
     ml.wikibooks.org: default_project
     mr.wikibooks.org: default_project
