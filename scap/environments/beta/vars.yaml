@@ -7,6 +7,50 @@ cassandra_default_consistency: localOne
 parsoid_uri: http://deployment-parsoid12.deployment-prep.eqiad1.wikimedia.cloud/w/rest.php
 domains:
   BetaCluster:
+    # new domain
+    aa.wikipedia.beta.wmcloud.org: wikipedia.org
+    api.wikimedia.beta.wmcloud.org: default_project
+    ar.wikipedia.beta.wmcloud.org: wikipedia.org
+    bn.wikipedia.beta.wmcloud.org: wikipedia.org
+    ca.wikipedia.beta.wmcloud.org: wikipedia.org
+    cs.wikipedia.beta.wmcloud.org: wikipedia.org
+    commons.wikimedia.beta.wmcloud.org: commons_project
+    de.wikipedia.beta.wmcloud.org: wikipedia.org_no_storage
+    de.wiktionary.beta.wmcloud.org: wiktionary_project
+    en-rtl.wikipedia.beta.wmcloud.org: wikipedia.org
+    en.wikibooks.beta.wmcloud.org: default_project
+    en.wikinews.beta.wmcloud.org: default_project
+    en.wikipedia.beta.wmcloud.org: wikipedia.org
+    en.wikiquote.beta.wmcloud.org: default_project
+    en.wikisource.beta.wmcloud.org: default_project
+    en.wiktionary.beta.wmcloud.org: wiktionary_project
+    en.wikiversity.beta.wmcloud.org: default_project
+    en.wikivoyage.beta.wmcloud.org: wikivoyage_project
+    eo.wikipedia.beta.wmcloud.org: wikipedia.org
+    es.wikipedia.beta.wmcloud.org: wikipedia.org_no_storage
+    fa.wikipedia.beta.wmcloud.org: wikipedia.org
+    fr.wikipedia.beta.wmcloud.org: wikipedia.org
+    he.wikipedia.beta.wmcloud.org: wikipedia.org
+    he.wiktionary.beta.wmcloud.org: wiktionary_project
+    hi.wikipedia.beta.wmcloud.org: wikipedia.org
+    ja.wikipedia.beta.wmcloud.org: wikipedia.org
+    ko.wikipedia.beta.wmcloud.org: wikipedia.org
+    login.wikimedia.beta.wmcloud.org: default_project
+    meta.wikimedia.beta.wmcloud.org: default_project
+    nl.wikipedia.beta.wmcloud.org: wikipedia.org
+    ru.wikipedia.beta.wmcloud.org: wikipedia.org
+    simple.wikipedia.beta.wmcloud.org: wikipedia.org
+    sr.wikipedia.beta.wmcloud.org: wikipedia.org
+    sq.wikipedia.beta.wmcloud.org: wikipedia.org
+    sv.wikipedia.beta.wmcloud.org: wikipedia.org
+    test.wikimedia.beta.wmcloud.org: default_project
+    uk.wikipedia.beta.wmcloud.org: wikipedia.org
+    vi.wikipedia.beta.wmcloud.org: wikipedia.org
+    wikidata.beta.wmcloud.org: wikidata.org
+    zero.wikimedia.beta.wmcloud.org: default_project
+    zh.wikipedia.beta.wmcloud.org: wikipedia.org
+    zh.wikivoyage.beta.wmcloud.org: wikivoyage_project
+    # old domain
     aa.wikipedia.beta.wmflabs.org: wikipedia.org
     api.wikimedia.beta.wmflabs.org: default_project
     ar.wikipedia.beta.wmflabs.org: wikipedia.org
