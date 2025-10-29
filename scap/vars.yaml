@@ -630,6 +630,7 @@ domains:
     nl.wikiquote.org: default_project
     nn.wikiquote.org: default_project
     no.wikiquote.org: default_project
+    pcm.wikiquote.org: default_project
     pl.wikiquote.org: default_project
     pt.wikiquote.org: default_project
     ro.wikiquote.org: default_project
@@ -699,6 +700,7 @@ domains:
     lij.wikisource.org: default_project
     lt.wikisource.org: default_project
     mad.wikisource.org: default_project
+    min.wikisource.org: default_project
     mk.wikisource.org: default_project
     ml.wikisource.org: default_project
     mr.wikisource.org: default_project
