@@ -44,11 +44,6 @@ logging:
 
 # Statsd metrics reporter
 metrics:
-  - name: <%= metrics_name %>
-    host: <%= metrics_host %>
-    port: <%= metrics_port %>
-    type: statsd
-    batch: true
   - name: <%= metrics_prometheus_name %>
     port: <%= metrics_prometheus_port %>
     type: prometheus
